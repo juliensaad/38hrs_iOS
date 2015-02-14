@@ -14,6 +14,7 @@
 		37D77CDD1A8E80C200BAB659 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37D77CDC1A8E80C200BAB659 /* Images.xcassets */; };
 		37D77CE01A8E80C200BAB659 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37D77CDE1A8E80C200BAB659 /* LaunchScreen.xib */; };
 		37D77CEC1A8E80C200BAB659 /* _8HRSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D77CEB1A8E80C200BAB659 /* _8HRSTests.swift */; };
+		37D77CF71A8FC95500BAB659 /* ami.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D77CF61A8FC95500BAB659 /* ami.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		37D77CEA1A8E80C200BAB659 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37D77CEB1A8E80C200BAB659 /* _8HRSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _8HRSTests.swift; sourceTree = "<group>"; };
 		37D77CF51A8E825400BAB659 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		37D77CF61A8FC95500BAB659 /* ami.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ami.swift; sourceTree = "<group>"; };
 		624476D959339E95AC4763B6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4BEC918D96C2D245C0828E4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,6 +103,7 @@
 				37D77CDC1A8E80C200BAB659 /* Images.xcassets */,
 				37D77CDE1A8E80C200BAB659 /* LaunchScreen.xib */,
 				37D77CD31A8E80C200BAB659 /* Supporting Files */,
+				37D77CF61A8FC95500BAB659 /* ami.swift */,
 			);
 			path = 38HRS;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 			files = (
 				37D77CD81A8E80C200BAB659 /* ViewController.swift in Sources */,
 				37D77CD61A8E80C200BAB659 /* AppDelegate.swift in Sources */,
+				37D77CF71A8FC95500BAB659 /* ami.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
