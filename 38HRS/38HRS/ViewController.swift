@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    internal var amis : [ami] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,14 +26,15 @@ class ViewController: UIViewController {
             
             var entriData = defaults.objectForKey("entries") as NSData
             var entries = NSKeyedUnarchiver.unarchiveObjectWithData(entriData) as NSArray
-            println(entries)
+            self.createModelEntries(entries)
             
         }else{
         
             client.initialSynchronizationWithSuccess({ (response: CDAResponse!, space : CDASyncedSpace!) -> Void in
                 
                 println("From web : ")
-                println(space.entries);
+                
+                self.createModelEntries(space.entries)
                 
                 var entriData = NSKeyedArchiver.archivedDataWithRootObject(space.entries)
                 
@@ -50,6 +53,17 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    func createModelEntries(entriesArray :NSArray){
+        
+        for var i=0 ; i<entriesArray.count ; i++ {
+            var entry = entriesArray[i] as CDAEntry
+            self.amis.append(ami(name: entry.fields["name"] as String, age: entry.fields["age"] as Int))
+        }
+        
+        for ami in self.amis {
+            println(ami.name)
+            println(ami.age)
+        }
+    }
 }
 
