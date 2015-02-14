@@ -28,23 +28,19 @@ class ViewController: UIViewController {
             
         }else{
         
-        client.initialSynchronizationWithSuccess({ (response: CDAResponse!, space : CDASyncedSpace!) -> Void in
-            
-            println("From web : ")
-            println(space.entries);
-            
-            var entriData = NSKeyedArchiver.archivedDataWithRootObject(space.entries)
-            
-            defaults.setObject(entriData, forKey: "entries")
-            defaults.synchronize()
-            
-            //var alex = ami(name: "coucou",age: 22)
-            
-            //var manager = CDAPersistenceManager()
-            
-            }, failure: { (response: CDAResponse!, error: NSError!) -> Void in
-                println(error)
-        })
+            client.initialSynchronizationWithSuccess({ (response: CDAResponse!, space : CDASyncedSpace!) -> Void in
+                
+                println("From web : ")
+                println(space.entries);
+                
+                var entriData = NSKeyedArchiver.archivedDataWithRootObject(space.entries)
+                
+                defaults.setObject(entriData, forKey: "entries")
+                defaults.synchronize()
+                
+                }, failure: { (response: CDAResponse!, error: NSError!) -> Void in
+                    println(error)
+            })
         }
         
     }
