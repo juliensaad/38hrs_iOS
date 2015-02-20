@@ -10,5 +10,6 @@
 #define ContentfulTest_Bridging_Header_h
 
 #import <ContentfulDeliveryAPI/ContentfulDeliveryAPI.h>
+#import "Reachability.h"
 
 #endif

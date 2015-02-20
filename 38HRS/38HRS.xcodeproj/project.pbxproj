@@ -15,6 +15,9 @@
 		37D77CE01A8E80C200BAB659 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37D77CDE1A8E80C200BAB659 /* LaunchScreen.xib */; };
 		37D77CEC1A8E80C200BAB659 /* _8HRSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D77CEB1A8E80C200BAB659 /* _8HRSTests.swift */; };
 		37D77CF71A8FC95500BAB659 /* ami.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D77CF61A8FC95500BAB659 /* ami.swift */; };
+		37EA13ED1A97B7B300A63589 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EA13EC1A97B7B300A63589 /* Config.swift */; };
+		37EA13F11A97C8AF00A63589 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EA13F01A97C8AF00A63589 /* Reachability.m */; };
+		37EA13F31A97CAB200A63589 /* ModelInterfaceSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EA13F21A97CAB200A63589 /* ModelInterfaceSingleton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +44,10 @@
 		37D77CEB1A8E80C200BAB659 /* _8HRSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _8HRSTests.swift; sourceTree = "<group>"; };
 		37D77CF51A8E825400BAB659 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		37D77CF61A8FC95500BAB659 /* ami.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ami.swift; sourceTree = "<group>"; };
+		37EA13EC1A97B7B300A63589 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		37EA13EF1A97C8AF00A63589 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		37EA13F01A97C8AF00A63589 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		37EA13F21A97CAB200A63589 /* ModelInterfaceSingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelInterfaceSingleton.swift; sourceTree = "<group>"; };
 		624476D959339E95AC4763B6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4BEC918D96C2D245C0828E4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,6 +103,7 @@
 		37D77CD21A8E80C200BAB659 /* 38HRS */ = {
 			isa = PBXGroup;
 			children = (
+				37EA13EE1A97C89E00A63589 /* Reachability */,
 				37D77CF51A8E825400BAB659 /* Bridging-Header.h */,
 				37D77CD51A8E80C200BAB659 /* AppDelegate.swift */,
 				37D77CD71A8E80C200BAB659 /* ViewController.swift */,
@@ -104,6 +112,8 @@
 				37D77CDE1A8E80C200BAB659 /* LaunchScreen.xib */,
 				37D77CD31A8E80C200BAB659 /* Supporting Files */,
 				37D77CF61A8FC95500BAB659 /* ami.swift */,
+				37EA13EC1A97B7B300A63589 /* Config.swift */,
+				37EA13F21A97CAB200A63589 /* ModelInterfaceSingleton.swift */,
 			);
 			path = 38HRS;
 			sourceTree = "<group>";
@@ -131,6 +141,15 @@
 				37D77CEA1A8E80C200BAB659 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		37EA13EE1A97C89E00A63589 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				37EA13EF1A97C8AF00A63589 /* Reachability.h */,
+				37EA13F01A97C8AF00A63589 /* Reachability.m */,
+			);
+			name = Reachability;
 			sourceTree = "<group>";
 		};
 		FE5481FA44FC5480B7773F64 /* Frameworks */ = {
@@ -277,8 +296,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				37D77CD81A8E80C200BAB659 /* ViewController.swift in Sources */,
+				37EA13ED1A97B7B300A63589 /* Config.swift in Sources */,
 				37D77CD61A8E80C200BAB659 /* AppDelegate.swift in Sources */,
 				37D77CF71A8FC95500BAB659 /* ami.swift in Sources */,
+				37EA13F11A97C8AF00A63589 /* Reachability.m in Sources */,
+				37EA13F31A97CAB200A63589 /* ModelInterfaceSingleton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
