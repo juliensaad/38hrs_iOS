@@ -8,13 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LocationViewController: UIViewController {
     
     let modelSingleton = ModelInterfaceSingleton.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         modelSingleton.getAppContent()
     }
 
