@@ -12,9 +12,14 @@ class LocationViewController: UIViewController {
     
     let modelSingleton = ModelInterfaceSingleton.sharedInstance
     
+    @IBOutlet weak var locationImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        modelSingleton.getAppContent()
+        //modelSingleton.getAppContent()
+        
+        locationImage.image = modelSingleton.loadImage();
+        
     }
 
     override func didReceiveMemoryWarning() {

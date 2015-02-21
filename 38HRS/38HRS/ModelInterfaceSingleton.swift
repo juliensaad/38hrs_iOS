@@ -72,4 +72,21 @@ class ModelInterfaceSingleton{
         }
         
     }
+    
+    func getImageFromUrl(urlString : String){
+        let url = NSURL(string: urlString)
+        let data = NSData(contentsOfURL: url!)
+        let image = UIImage(data: data!)!
+        
+        let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
+        let destinationPath = documentsPath.stringByAppendingPathComponent("filename.jpg")
+        UIImageJPEGRepresentation(image,1.0).writeToFile(destinationPath, atomically: true)
+    }
+    
+    func loadImage() -> UIImage{
+        let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
+        let destinationPath = documentsPath.stringByAppendingPathComponent("filename.jpg")
+        
+        return UIImage(contentsOfFile: destinationPath)!
+    }
 }

@@ -17,6 +17,7 @@
 		37EA13ED1A97B7B300A63589 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EA13EC1A97B7B300A63589 /* Config.swift */; };
 		37EA13F11A97C8AF00A63589 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EA13F01A97C8AF00A63589 /* Reachability.m */; };
 		37EA13F31A97CAB200A63589 /* ModelInterfaceSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EA13F21A97CAB200A63589 /* ModelInterfaceSingleton.swift */; };
+		37EA13FA1A98FCB400A63589 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EA13F91A98FCB400A63589 /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		37EA13EF1A97C8AF00A63589 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		37EA13F01A97C8AF00A63589 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		37EA13F21A97CAB200A63589 /* ModelInterfaceSingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelInterfaceSingleton.swift; sourceTree = "<group>"; };
+		37EA13F91A98FCB400A63589 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		624476D959339E95AC4763B6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4BEC918D96C2D245C0828E4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -162,6 +164,7 @@
 		37EA13F71A98FB4D00A63589 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				37EA13F91A98FCB400A63589 /* Location.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				37EA13ED1A97B7B300A63589 /* Config.swift in Sources */,
 				37D77CD61A8E80C200BAB659 /* AppDelegate.swift in Sources */,
 				37EA13F11A97C8AF00A63589 /* Reachability.m in Sources */,
+				37EA13FA1A98FCB400A63589 /* Location.swift in Sources */,
 				37EA13F31A97CAB200A63589 /* ModelInterfaceSingleton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
