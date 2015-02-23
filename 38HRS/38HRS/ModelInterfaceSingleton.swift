@@ -38,6 +38,7 @@ class ModelInterfaceSingleton{
                 println("From web : ")
                 
                 // self.createModelEntries(space.entries)
+                self.downloadAllAssets(space.assets)
                 
                 var entriData = NSKeyedArchiver.archivedDataWithRootObject(space.entries)
                 var assetData = NSKeyedArchiver.archivedDataWithRootObject(space.assets)
@@ -61,7 +62,7 @@ class ModelInterfaceSingleton{
             
             // self.createModelEntries(entries)
         }
-        
+
     }
     
     private func createModelEntries(entriesArray :NSArray){
@@ -73,14 +74,25 @@ class ModelInterfaceSingleton{
         
     }
     
-    func getImageFromUrl(urlString : String){
-        let url = NSURL(string: urlString)
-        let data = NSData(contentsOfURL: url!)
-        let image = UIImage(data: data!)!
+    private func downloadAllAssets(assetsArray :NSArray){
         
-        let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
-        let destinationPath = documentsPath.stringByAppendingPathComponent("filename.jpg")
-        UIImageJPEGRepresentation(image,1.0).writeToFile(destinationPath, atomically: true)
+        for var i=0 ; i<assetsArray.count ; i++ {
+            var asset = assetsArray[i] as CDAAsset
+            self.getImageFromUrl(asset.URL)
+        }
+        println("done")
+    }
+    
+    private func getImageFromUrl(url : NSURL){
+        let data = NSData(contentsOfURL: url)
+        
+        if(data != nil){
+            let image = UIImage(data: data!)!
+            
+            let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
+            let destinationPath = documentsPath.stringByAppendingPathComponent("filename.jpg")
+            UIImageJPEGRepresentation(image,1.0).writeToFile(destinationPath, atomically: true)
+        }
     }
     
     func loadImage() -> UIImage{

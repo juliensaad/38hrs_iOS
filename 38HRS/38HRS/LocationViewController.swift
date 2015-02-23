@@ -13,12 +13,14 @@ class LocationViewController: UIViewController {
     let modelSingleton = ModelInterfaceSingleton.sharedInstance
     
     @IBOutlet weak var locationImage: UIImageView!
+    @IBOutlet weak var label: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //modelSingleton.getAppContent()
-        
-        locationImage.image = modelSingleton.loadImage();
+        modelSingleton.getAppContent()
+        //locationImage.image = modelSingleton.loadImage()
+        label.text = "coucou";
+        label.font = UIFont(name: "FuturaStd-Bold", size: 20)
         
     }
 

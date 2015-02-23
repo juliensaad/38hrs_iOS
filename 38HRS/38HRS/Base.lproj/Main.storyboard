@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Location View Controller-->
@@ -16,23 +17,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HI7-7j-80M">
+                                <rect key="frame" x="133" y="19" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sap-Am-S8Z">
-                                <rect key="frame" x="49" y="28" width="211" height="146"/>
+                                <rect key="frame" x="49" y="239" width="211" height="146"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="Sap-Am-S8Z" secondAttribute="centerX" constant="5.5" id="9RG-Ze-Kpc"/>
                             <constraint firstItem="Sap-Am-S8Z" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="GQQ-jA-M6N"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HI7-7j-80M" secondAttribute="trailing" constant="129" id="ILL-ur-ouH"/>
+                            <constraint firstAttribute="centerX" secondItem="HI7-7j-80M" secondAttribute="centerX" constant="6" id="JTm-8k-FfZ"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="label" destination="HI7-7j-80M" id="nAi-Qs-weO"/>
                         <outlet property="locationImage" destination="Sap-Am-S8Z" id="rs9-oD-1pz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="202" y="239"/>
+            <point key="canvasLocation" x="188" y="262"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="2OA-X8-dQB">
+            <objects>
+                <viewController id="Z4c-0j-C24" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NB0-Wi-d8N"/>
+                        <viewControllerLayoutGuide type="bottom" id="zde-NF-m7R"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cPZ-xW-tdI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p7q-qN-gUx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
