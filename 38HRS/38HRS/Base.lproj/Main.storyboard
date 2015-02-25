@@ -15,9 +15,33 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQ5-KG-bAN">
+                                <rect key="frame" x="0.0" y="64" width="320" height="184"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="184" id="TZ3-Dl-zAJ"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="sQ5-KG-bAN" secondAttribute="trailing" id="AIX-G1-XEh"/>
+                            <constraint firstItem="sQ5-KG-bAN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="AcR-0j-DWi"/>
+                            <constraint firstItem="sQ5-KG-bAN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="UQX-eh-40e"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="2je-c3-ZJg"/>
+                    <navigationItem key="navigationItem" id="W0H-M4-jYi">
+                        <barButtonItem key="leftBarButtonItem" image="nav_back" id="yqo-tl-Cau">
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="location_nav_plus" id="xew-rk-6yx">
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageScrollView" destination="sQ5-KG-bAN" id="xI0-ux-6te"/>
+                        <outlet property="navItem" destination="W0H-M4-jYi" id="eKC-29-i6A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -28,7 +52,7 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="moE-fg-csb" customClass="MainTabBarController" customModule="_8HRS" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="NOp-We-lXJ">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -140,6 +164,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="location_nav_plus" width="24" height="24"/>
+        <image name="nav_back" width="27" height="19"/>
         <image name="tab_icon_cur" width="24" height="24"/>
         <image name="tab_icon_it" width="27" height="24"/>
         <image name="tab_icon_loc" width="21" height="24"/>

@@ -11,7 +11,7 @@
 		370BAFF21A9D6E3200DC0EAB /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370BAFF11A9D6E3200DC0EAB /* MainTabBarController.swift */; };
 		370BAFF41A9D825500DC0EAB /* KingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370BAFF31A9D825500DC0EAB /* KingViewController.swift */; };
 		370D0CAD1A9BDD6800D4FE27 /* FuturaStd-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 370D0CAC1A9BDD6800D4FE27 /* FuturaStd-Bold.otf */; };
-		370D0CB51A9C05CE00D4FE27 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 370D0CB41A9C05CE00D4FE27 /* Images.xcassets */; };
+		3761A7061A9E3931005125B2 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3761A7051A9E3931005125B2 /* Media.xcassets */; };
 		37D77CD61A8E80C200BAB659 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D77CD51A8E80C200BAB659 /* AppDelegate.swift */; };
 		37D77CD81A8E80C200BAB659 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D77CD71A8E80C200BAB659 /* LocationViewController.swift */; };
 		37D77CDB1A8E80C200BAB659 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37D77CD91A8E80C200BAB659 /* Main.storyboard */; };
@@ -38,7 +38,7 @@
 		370BAFF11A9D6E3200DC0EAB /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		370BAFF31A9D825500DC0EAB /* KingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KingViewController.swift; sourceTree = "<group>"; };
 		370D0CAC1A9BDD6800D4FE27 /* FuturaStd-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FuturaStd-Bold.otf"; sourceTree = "<group>"; };
-		370D0CB41A9C05CE00D4FE27 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3761A7051A9E3931005125B2 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		37D77CD01A8E80C200BAB659 /* 38HRS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 38HRS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37D77CD41A8E80C200BAB659 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37D77CD51A8E80C200BAB659 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -117,7 +117,6 @@
 		37D77CD21A8E80C200BAB659 /* 38HRS */ = {
 			isa = PBXGroup;
 			children = (
-				370D0CB41A9C05CE00D4FE27 /* Images.xcassets */,
 				370D0CAB1A9BDD5200D4FE27 /* Resources */,
 				37EA13F81A98FB5300A63589 /* Views */,
 				37EA13F71A98FB4D00A63589 /* Models */,
@@ -128,6 +127,7 @@
 				37D77CD91A8E80C200BAB659 /* Main.storyboard */,
 				37D77CD31A8E80C200BAB659 /* Supporting Files */,
 				37EA13EC1A97B7B300A63589 /* Config.swift */,
+				3761A7051A9E3931005125B2 /* Media.xcassets */,
 			);
 			path = 38HRS;
 			sourceTree = "<group>";
@@ -284,8 +284,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				37D77CDB1A8E80C200BAB659 /* Main.storyboard in Resources */,
-				370D0CB51A9C05CE00D4FE27 /* Images.xcassets in Resources */,
 				370D0CAD1A9BDD6800D4FE27 /* FuturaStd-Bold.otf in Resources */,
+				3761A7061A9E3931005125B2 /* Media.xcassets in Resources */,
 				37D77CE01A8E80C200BAB659 /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
