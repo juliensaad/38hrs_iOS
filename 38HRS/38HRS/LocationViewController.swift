@@ -8,20 +8,18 @@
 
 import UIKit
 
-class LocationViewController: UIViewController {
+class LocationViewController: KingViewController {
     
     let modelSingleton = ModelInterfaceSingleton.sharedInstance
     
-    @IBOutlet weak var locationImage: UIImageView!
-    @IBOutlet weak var label: UILabel!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        modelSingleton.getAppContent()
-        //locationImage.image = modelSingleton.loadImage()
-        label.text = "coucou";
-        label.font = UIFont(name: "FuturaStd-Bold", size: 20)
+        //modelSingleton.getAppContent()
+        self.view.backgroundColor = greenColor
         
+        //locationImage.image = modelSingleton.loadImage()
+        //label.text = "coucou";
+        //label.font = UIFont(name: "FuturaStd-Bold", size: 20)
     }
 
     override func didReceiveMemoryWarning() {

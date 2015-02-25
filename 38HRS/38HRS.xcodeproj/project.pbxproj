@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		36B16C4E74A06FF04DD483C4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 624476D959339E95AC4763B6 /* libPods.a */; };
+		370BAFF21A9D6E3200DC0EAB /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370BAFF11A9D6E3200DC0EAB /* MainTabBarController.swift */; };
+		370BAFF41A9D825500DC0EAB /* KingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370BAFF31A9D825500DC0EAB /* KingViewController.swift */; };
 		370D0CAD1A9BDD6800D4FE27 /* FuturaStd-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 370D0CAC1A9BDD6800D4FE27 /* FuturaStd-Bold.otf */; };
+		370D0CB51A9C05CE00D4FE27 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 370D0CB41A9C05CE00D4FE27 /* Images.xcassets */; };
 		37D77CD61A8E80C200BAB659 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D77CD51A8E80C200BAB659 /* AppDelegate.swift */; };
 		37D77CD81A8E80C200BAB659 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D77CD71A8E80C200BAB659 /* LocationViewController.swift */; };
 		37D77CDB1A8E80C200BAB659 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37D77CD91A8E80C200BAB659 /* Main.storyboard */; };
-		37D77CDD1A8E80C200BAB659 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37D77CDC1A8E80C200BAB659 /* Images.xcassets */; };
 		37D77CE01A8E80C200BAB659 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37D77CDE1A8E80C200BAB659 /* LaunchScreen.xib */; };
 		37D77CEC1A8E80C200BAB659 /* _8HRSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D77CEB1A8E80C200BAB659 /* _8HRSTests.swift */; };
 		37EA13ED1A97B7B300A63589 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EA13EC1A97B7B300A63589 /* Config.swift */; };
@@ -33,13 +35,15 @@
 
 /* Begin PBXFileReference section */
 		1E4055A2D9EBA158AD56F700 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		370BAFF11A9D6E3200DC0EAB /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		370BAFF31A9D825500DC0EAB /* KingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KingViewController.swift; sourceTree = "<group>"; };
 		370D0CAC1A9BDD6800D4FE27 /* FuturaStd-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FuturaStd-Bold.otf"; sourceTree = "<group>"; };
+		370D0CB41A9C05CE00D4FE27 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		37D77CD01A8E80C200BAB659 /* 38HRS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 38HRS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37D77CD41A8E80C200BAB659 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37D77CD51A8E80C200BAB659 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37D77CD71A8E80C200BAB659 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		37D77CDA1A8E80C200BAB659 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		37D77CDC1A8E80C200BAB659 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		37D77CDF1A8E80C200BAB659 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		37D77CE51A8E80C200BAB659 /* 38HRSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 38HRSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		37D77CEA1A8E80C200BAB659 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -113,6 +117,7 @@
 		37D77CD21A8E80C200BAB659 /* 38HRS */ = {
 			isa = PBXGroup;
 			children = (
+				370D0CB41A9C05CE00D4FE27 /* Images.xcassets */,
 				370D0CAB1A9BDD5200D4FE27 /* Resources */,
 				37EA13F81A98FB5300A63589 /* Views */,
 				37EA13F71A98FB4D00A63589 /* Models */,
@@ -121,8 +126,6 @@
 				37D77CF51A8E825400BAB659 /* Bridging-Header.h */,
 				37D77CD51A8E80C200BAB659 /* AppDelegate.swift */,
 				37D77CD91A8E80C200BAB659 /* Main.storyboard */,
-				37D77CDC1A8E80C200BAB659 /* Images.xcassets */,
-				37D77CDE1A8E80C200BAB659 /* LaunchScreen.xib */,
 				37D77CD31A8E80C200BAB659 /* Supporting Files */,
 				37EA13EC1A97B7B300A63589 /* Config.swift */,
 			);
@@ -168,6 +171,8 @@
 			children = (
 				37D77CD71A8E80C200BAB659 /* LocationViewController.swift */,
 				37EA13F21A97CAB200A63589 /* ModelInterfaceSingleton.swift */,
+				370BAFF11A9D6E3200DC0EAB /* MainTabBarController.swift */,
+				370BAFF31A9D825500DC0EAB /* KingViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -183,6 +188,7 @@
 		37EA13F81A98FB5300A63589 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				37D77CDE1A8E80C200BAB659 /* LaunchScreen.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -278,9 +284,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				37D77CDB1A8E80C200BAB659 /* Main.storyboard in Resources */,
+				370D0CB51A9C05CE00D4FE27 /* Images.xcassets in Resources */,
 				370D0CAD1A9BDD6800D4FE27 /* FuturaStd-Bold.otf in Resources */,
 				37D77CE01A8E80C200BAB659 /* LaunchScreen.xib in Resources */,
-				37D77CDD1A8E80C200BAB659 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +339,8 @@
 			files = (
 				37D77CD81A8E80C200BAB659 /* LocationViewController.swift in Sources */,
 				37EA13ED1A97B7B300A63589 /* Config.swift in Sources */,
+				370BAFF21A9D6E3200DC0EAB /* MainTabBarController.swift in Sources */,
+				370BAFF41A9D825500DC0EAB /* KingViewController.swift in Sources */,
 				37D77CD61A8E80C200BAB659 /* AppDelegate.swift in Sources */,
 				37EA13F11A97C8AF00A63589 /* Reachability.m in Sources */,
 				37EA13FA1A98FCB400A63589 /* Location.swift in Sources */,

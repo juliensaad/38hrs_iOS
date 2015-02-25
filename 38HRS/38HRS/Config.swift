@@ -9,6 +9,8 @@
 import Foundation
 
 let greenColor : UIColor = UIColor(netHex:0x00bc5c)
+let screenWidth = UIScreen.mainScreen().bounds.width
+let screenHeight = UIScreen.mainScreen().bounds.height
 
 extension UIColor {
     convenience init(red: Int, green: Int, blue: Int) {
