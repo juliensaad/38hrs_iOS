@@ -8,14 +8,24 @@
 
 import UIKit
 
-class KingViewController: UIViewController {
+class KingViewController: UIViewController, ENSideMenuDelegate {
 
+    var mainNavigationController : MainNavigationController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.navigationBar.translucent = false
-        self.navigationController?.navigationBar.opaque = true
+        mainNavigationController = (self.navigationController as MainNavigationController)
+        
+        mainNavigationController.navigationBar.translucent = false
+        mainNavigationController.navigationBar.opaque = true
         self.extendedLayoutIncludesOpaqueBars = true
+        
+        self.sideMenuController()?.sideMenu?.delegate = self;
+    }
+    
+    override func viewDidLayoutSubviews() {
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,6 +33,20 @@ class KingViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: - ENSideMenu Delegate
+    func sideMenuWillOpen() {
+        println("sideMenuWillOpen")
+        mainNavigationController.coverView.hidden = false
+    }
+    
+    func sideMenuWillClose() {
+        println("sideMenuWillClose")
+    }
+    
+    func sideMenuShouldOpenSideMenu() -> Bool {
+        println("sideMenuShouldOpenSideMenu")
+        return true;
+    }
 
     /*
     // MARK: - Navigation

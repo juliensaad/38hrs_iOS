@@ -108,6 +108,9 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="location_nav_plus" id="xew-rk-6yx">
                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="didPressNavAddButton:" destination="BYZ-38-t0r" id="CPG-3c-ARb"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -184,10 +187,10 @@
             </objects>
             <point key="canvasLocation" x="1292" y="934"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Main Navigation Controller-->
         <scene sceneID="lCa-n5-Y9M">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="y1Q-C1-tjq" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="y1Q-C1-tjq" customClass="MainNavigationController" customModule="_8HRS" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="tab_icon_loc" id="sLs-h1-3Yh"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ctf-Wy-JiL">

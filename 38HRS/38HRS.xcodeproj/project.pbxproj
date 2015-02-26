@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		36B16C4E74A06FF04DD483C4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 624476D959339E95AC4763B6 /* libPods.a */; };
 		370BAFF21A9D6E3200DC0EAB /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370BAFF11A9D6E3200DC0EAB /* MainTabBarController.swift */; };
 		370BAFF41A9D825500DC0EAB /* KingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370BAFF31A9D825500DC0EAB /* KingViewController.swift */; };
 		370D0CAD1A9BDD6800D4FE27 /* FuturaStd-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 370D0CAC1A9BDD6800D4FE27 /* FuturaStd-Bold.otf */; };
+		373934E81A9FD08300B92E2E /* ENSideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373934E61A9FD08300B92E2E /* ENSideMenu.swift */; };
+		373934E91A9FD08300B92E2E /* ENSideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373934E71A9FD08300B92E2E /* ENSideMenuNavigationController.swift */; };
+		373934EB1A9FD51300B92E2E /* MenuTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 373934EA1A9FD51300B92E2E /* MenuTableView.xib */; };
 		3761A7061A9E3931005125B2 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3761A7051A9E3931005125B2 /* Media.xcassets */; };
 		3761A7081A9E962E005125B2 /* FuturaStd-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3761A7071A9E962E005125B2 /* FuturaStd-Medium.otf */; };
 		3761A70A1A9FA779005125B2 /* BorderedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3761A7091A9FA779005125B2 /* BorderedLabel.swift */; };
+		3761A70C1A9FC5D5005125B2 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3761A70B1A9FC5D5005125B2 /* MainNavigationController.swift */; };
+		3761A7101A9FCBAF005125B2 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3761A70F1A9FCBAF005125B2 /* MenuTableViewController.swift */; };
 		37D77CD61A8E80C200BAB659 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D77CD51A8E80C200BAB659 /* AppDelegate.swift */; };
 		37D77CD81A8E80C200BAB659 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D77CD71A8E80C200BAB659 /* LocationViewController.swift */; };
 		37D77CDB1A8E80C200BAB659 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37D77CD91A8E80C200BAB659 /* Main.storyboard */; };
@@ -23,6 +27,7 @@
 		37EA13F11A97C8AF00A63589 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EA13F01A97C8AF00A63589 /* Reachability.m */; };
 		37EA13F31A97CAB200A63589 /* ModelInterfaceSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EA13F21A97CAB200A63589 /* ModelInterfaceSingleton.swift */; };
 		37EA13FA1A98FCB400A63589 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EA13F91A98FCB400A63589 /* Location.swift */; };
+		A1ADCF20934AF3EF40968B0F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3799F540AC59DD2663F189A /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,9 +45,14 @@
 		370BAFF11A9D6E3200DC0EAB /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		370BAFF31A9D825500DC0EAB /* KingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KingViewController.swift; sourceTree = "<group>"; };
 		370D0CAC1A9BDD6800D4FE27 /* FuturaStd-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FuturaStd-Bold.otf"; sourceTree = "<group>"; };
+		373934E61A9FD08300B92E2E /* ENSideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenu.swift; sourceTree = "<group>"; };
+		373934E71A9FD08300B92E2E /* ENSideMenuNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenuNavigationController.swift; sourceTree = "<group>"; };
+		373934EA1A9FD51300B92E2E /* MenuTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuTableView.xib; sourceTree = "<group>"; };
 		3761A7051A9E3931005125B2 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		3761A7071A9E962E005125B2 /* FuturaStd-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FuturaStd-Medium.otf"; sourceTree = "<group>"; };
 		3761A7091A9FA779005125B2 /* BorderedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedLabel.swift; sourceTree = "<group>"; };
+		3761A70B1A9FC5D5005125B2 /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		3761A70F1A9FCBAF005125B2 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		37D77CD01A8E80C200BAB659 /* 38HRS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 38HRS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37D77CD41A8E80C200BAB659 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37D77CD51A8E80C200BAB659 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,8 +68,8 @@
 		37EA13F01A97C8AF00A63589 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		37EA13F21A97CAB200A63589 /* ModelInterfaceSingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelInterfaceSingleton.swift; sourceTree = "<group>"; };
 		37EA13F91A98FCB400A63589 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
-		624476D959339E95AC4763B6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4BEC918D96C2D245C0828E4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		E3799F540AC59DD2663F189A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36B16C4E74A06FF04DD483C4 /* libPods.a in Frameworks */,
+				A1ADCF20934AF3EF40968B0F /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +109,15 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		373934E51A9FD07200B92E2E /* ENSideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				373934E61A9FD08300B92E2E /* ENSideMenu.swift */,
+				373934E71A9FD08300B92E2E /* ENSideMenuNavigationController.swift */,
+			);
+			name = ENSideMenu;
+			sourceTree = "<group>";
+		};
 		37D77CC71A8E80C200BAB659 = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +141,7 @@
 		37D77CD21A8E80C200BAB659 /* 38HRS */ = {
 			isa = PBXGroup;
 			children = (
+				373934E51A9FD07200B92E2E /* ENSideMenu */,
 				370D0CAB1A9BDD5200D4FE27 /* Resources */,
 				37EA13F81A98FB5300A63589 /* Views */,
 				37EA13F71A98FB4D00A63589 /* Models */,
@@ -178,6 +198,8 @@
 				37EA13F21A97CAB200A63589 /* ModelInterfaceSingleton.swift */,
 				370BAFF11A9D6E3200DC0EAB /* MainTabBarController.swift */,
 				370BAFF31A9D825500DC0EAB /* KingViewController.swift */,
+				3761A70B1A9FC5D5005125B2 /* MainNavigationController.swift */,
+				3761A70F1A9FCBAF005125B2 /* MenuTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -195,6 +217,7 @@
 			children = (
 				37D77CDE1A8E80C200BAB659 /* LaunchScreen.xib */,
 				3761A7091A9FA779005125B2 /* BorderedLabel.swift */,
+				373934EA1A9FD51300B92E2E /* MenuTableView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -202,7 +225,7 @@
 		FE5481FA44FC5480B7773F64 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				624476D959339E95AC4763B6 /* libPods.a */,
+				E3799F540AC59DD2663F189A /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -289,6 +312,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				373934EB1A9FD51300B92E2E /* MenuTableView.xib in Resources */,
 				37D77CDB1A8E80C200BAB659 /* Main.storyboard in Resources */,
 				3761A7081A9E962E005125B2 /* FuturaStd-Medium.otf in Resources */,
 				370D0CAD1A9BDD6800D4FE27 /* FuturaStd-Bold.otf in Resources */,
@@ -344,12 +368,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				373934E81A9FD08300B92E2E /* ENSideMenu.swift in Sources */,
+				3761A70C1A9FC5D5005125B2 /* MainNavigationController.swift in Sources */,
 				3761A70A1A9FA779005125B2 /* BorderedLabel.swift in Sources */,
 				37D77CD81A8E80C200BAB659 /* LocationViewController.swift in Sources */,
 				37EA13ED1A97B7B300A63589 /* Config.swift in Sources */,
+				3761A7101A9FCBAF005125B2 /* MenuTableViewController.swift in Sources */,
 				370BAFF21A9D6E3200DC0EAB /* MainTabBarController.swift in Sources */,
 				370BAFF41A9D825500DC0EAB /* KingViewController.swift in Sources */,
 				37D77CD61A8E80C200BAB659 /* AppDelegate.swift in Sources */,
+				373934E91A9FD08300B92E2E /* ENSideMenuNavigationController.swift in Sources */,
 				37EA13F11A97C8AF00A63589 /* Reachability.m in Sources */,
 				37EA13FA1A98FCB400A63589 /* Location.swift in Sources */,
 				37EA13F31A97CAB200A63589 /* ModelInterfaceSingleton.swift in Sources */,

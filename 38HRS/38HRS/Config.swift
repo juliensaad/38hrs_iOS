@@ -15,6 +15,8 @@ let lightGrayColor = UIColor(netHex:0xe4e4e4)
 let screenWidth = UIScreen.mainScreen().bounds.width
 let screenHeight = UIScreen.mainScreen().bounds.height
 
+let sideMenuWidth : CGFloat = 250
+
 extension UIColor {
     convenience init(red: Int, green: Int, blue: Int) {
         assert(red >= 0 && red <= 255, "Invalid red component")

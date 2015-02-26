@@ -51,7 +51,7 @@ class LocationViewController: KingViewController {
     
     func buildUI(){
         // nav bar
-        navItem.leftBarButtonItem?.tintColor = darkGrayColor
+        navItem.leftBarButtonItem?
         navItem.rightBarButtonItem?.tintColor = darkGrayColor
         
         // Cat tag
@@ -113,6 +113,10 @@ class LocationViewController: KingViewController {
         
         // Content size
         imageScrollView.contentSize = CGSizeMake(CGFloat(imageArray.count)*screenWidth, imageScrollView.frame.size.height)
+    }
+    
+    @IBAction func didPressNavAddButton(sender: AnyObject) {
+        self.toggleSideMenuView()
     }
     
     override func didReceiveMemoryWarning() {
