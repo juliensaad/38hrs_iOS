@@ -28,7 +28,10 @@ class MainTabBarController: UITabBarController {
         
         // Design Tab Bar
         self.tabBar.barTintColor = UIColor.whiteColor()
+        
+        self.tabBar.tintColor = darkGrayColor
         self.tabBar.selectedImageTintColor = greenColor
+        
         self.tabBar.frame.size.width = tabBarWidth
         self.tabBar.frame.inset(dx: 0, dy: 10)
         

@@ -11,6 +11,7 @@
         <mutableArray key="FuturaStd-Medium.otf">
             <string>FuturaStd-Medium</string>
             <string>FuturaStd-Medium</string>
+            <string>FuturaStd-Medium</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -56,18 +57,46 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iig-Df-vpH">
+                                <rect key="frame" x="16" y="317" width="284" height="126"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="126" id="2pn-iv-KLz"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPv-HR-aHw">
+                                <rect key="frame" x="20" y="419" width="280" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ktP-kq-UiT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="FuturaStd-Medium" family="Futura Std" pointSize="16"/>
+                                <state key="normal" title="Add to itinerary">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="0EK-rT-d8S" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="320-5a-uy6"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oPv-HR-aHw" secondAttribute="bottom" constant="60" id="44Z-Bl-jJ4"/>
                             <constraint firstItem="TpV-7q-xYR" firstAttribute="baseline" secondItem="Hhy-b7-Iww" secondAttribute="baseline" constant="-2.5" id="6Zt-gH-n2A"/>
                             <constraint firstAttribute="trailing" secondItem="sQ5-KG-bAN" secondAttribute="trailing" id="AIX-G1-XEh"/>
                             <constraint firstItem="sQ5-KG-bAN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="AcR-0j-DWi"/>
                             <constraint firstItem="Hhy-b7-Iww" firstAttribute="top" secondItem="0EK-rT-d8S" secondAttribute="bottom" constant="6.5" id="C8H-vn-bFq"/>
+                            <constraint firstAttribute="trailing" secondItem="Iig-Df-vpH" secondAttribute="trailing" constant="20" id="FXK-ka-g9j"/>
+                            <constraint firstItem="Hhy-b7-Iww" firstAttribute="leading" secondItem="Iig-Df-vpH" secondAttribute="leading" constant="4" id="Kd7-I4-ztE"/>
+                            <constraint firstItem="oPv-HR-aHw" firstAttribute="trailing" secondItem="Iig-Df-vpH" secondAttribute="trailing" id="LFs-W1-4jj"/>
                             <constraint firstItem="TpV-7q-xYR" firstAttribute="leading" secondItem="Hhy-b7-Iww" secondAttribute="trailing" constant="6" id="LfS-UM-PQK"/>
                             <constraint firstItem="TpV-7q-xYR" firstAttribute="centerY" secondItem="Hhy-b7-Iww" secondAttribute="centerY" id="OhA-4P-ehs"/>
                             <constraint firstItem="sQ5-KG-bAN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="UQX-eh-40e"/>
                             <constraint firstItem="0EK-rT-d8S" firstAttribute="top" secondItem="sQ5-KG-bAN" secondAttribute="bottom" constant="20" id="Ual-Hr-v7K"/>
+                            <constraint firstItem="Iig-Df-vpH" firstAttribute="top" secondItem="Hhy-b7-Iww" secondAttribute="bottom" constant="5" id="g1D-Xq-wLE"/>
+                            <constraint firstItem="Hhy-b7-Iww" firstAttribute="leading" secondItem="oPv-HR-aHw" secondAttribute="leading" id="lRK-RS-Oam"/>
                             <constraint firstItem="Hhy-b7-Iww" firstAttribute="leading" secondItem="0EK-rT-d8S" secondAttribute="leading" id="nWl-2h-lb1"/>
                             <constraint firstItem="8wV-Yg-yeV" firstAttribute="leading" secondItem="0EK-rT-d8S" secondAttribute="trailing" constant="8" id="v5R-tj-9K2"/>
                             <constraint firstItem="8wV-Yg-yeV" firstAttribute="baseline" secondItem="0EK-rT-d8S" secondAttribute="baseline" id="ysd-7Q-Otv"/>
@@ -82,10 +111,14 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addItButton" destination="oPv-HR-aHw" id="TZa-yB-HBV"/>
                         <outlet property="authorLabel" destination="TpV-7q-xYR" id="jxg-1N-cWE"/>
                         <outlet property="catTag" destination="0EK-rT-d8S" id="SMd-FG-0XX"/>
+                        <outlet property="descText" destination="Iig-Df-vpH" id="7kB-LK-0iL"/>
                         <outlet property="imageScrollView" destination="sQ5-KG-bAN" id="xI0-ux-6te"/>
                         <outlet property="nameLabel" destination="8wV-Yg-yeV" id="rFa-BO-WEt"/>
+                        <outlet property="navAddItButton" destination="xew-rk-6yx" id="64G-oA-ZF7"/>
+                        <outlet property="navBackButton" destination="yqo-tl-Cau" id="CmO-Zr-zhZ"/>
                         <outlet property="navItem" destination="W0H-M4-jYi" id="eKC-29-i6A"/>
                     </connections>
                 </viewController>

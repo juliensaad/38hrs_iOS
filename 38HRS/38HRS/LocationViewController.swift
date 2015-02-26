@@ -15,7 +15,11 @@ class LocationViewController: KingViewController {
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var catTag: BorderedLabel!
+    @IBOutlet weak var addItButton: UIButton!
+    @IBOutlet weak var descText: UITextView!
     
+    @IBOutlet weak var navBackButton: UIBarButtonItem!
+    @IBOutlet weak var navAddItButton: UIBarButtonItem!
     @IBOutlet weak var navItem: UINavigationItem!
     @IBOutlet weak var imageScrollView: UIScrollView!
     
@@ -46,10 +50,29 @@ class LocationViewController: KingViewController {
     }
     
     func buildUI(){
+        // nav bar
+        navItem.leftBarButtonItem?.tintColor = darkGrayColor
+        navItem.rightBarButtonItem?.tintColor = darkGrayColor
+        
+        // Cat tag
         catTag.text = "Food"
         catTag.sizeToFit()
         catTag.textColor = greenColor
         catTag.font = UIFont(name: "FuturaStd-Bold", size: 17)
+        
+        // Name label
+        nameLabel.text = "Katz Orange"
+        
+        // Author label
+        let underlineAttriString = NSAttributedString(string: "Nathalie S.", attributes: [NSUnderlineStyleAttributeName: NSUnderlineStyle.StyleSingle.rawValue])
+        authorLabel.attributedText = underlineAttriString
+        authorLabel.textColor = greenColor
+        
+        // Description
+        descText.sizeToFit()
+        
+        // Add button
+        addItButton.backgroundColor = greenColor
     }
     
     func setUpImageViewer(){
