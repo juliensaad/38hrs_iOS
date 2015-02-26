@@ -12,6 +12,9 @@ class LocationViewController: KingViewController {
     
     let modelSingleton = ModelInterfaceSingleton.sharedInstance
     
+    @IBOutlet weak var authorLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var catTag: UILabel!
     @IBOutlet weak var navItem: UINavigationItem!
     @IBOutlet weak var imageScrollView: UIScrollView!
     
@@ -31,6 +34,13 @@ class LocationViewController: KingViewController {
         imageArray.append(UIImage(named: "loc_image_two")!)
         
         setUpImageViewer()
+        
+        // TODO: Create tag label to add inset http://stackoverflow.com/questions/3476646/uilabel-text-margin
+        catTag.text = "food"
+        catTag.textColor = greenColor
+        catTag.layer.borderColor = greenColor.CGColor
+        catTag.layer.borderWidth = 2.0
+        catTag.sizeToFit()
         
         //modelSingleton.getAppContent()
         //locationImage.image = modelSingleton.loadImage()
