@@ -13,6 +13,7 @@
 		370D0CAD1A9BDD6800D4FE27 /* FuturaStd-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 370D0CAC1A9BDD6800D4FE27 /* FuturaStd-Bold.otf */; };
 		3761A7061A9E3931005125B2 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3761A7051A9E3931005125B2 /* Media.xcassets */; };
 		3761A7081A9E962E005125B2 /* FuturaStd-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3761A7071A9E962E005125B2 /* FuturaStd-Medium.otf */; };
+		3761A70A1A9FA779005125B2 /* BorderedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3761A7091A9FA779005125B2 /* BorderedLabel.swift */; };
 		37D77CD61A8E80C200BAB659 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D77CD51A8E80C200BAB659 /* AppDelegate.swift */; };
 		37D77CD81A8E80C200BAB659 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D77CD71A8E80C200BAB659 /* LocationViewController.swift */; };
 		37D77CDB1A8E80C200BAB659 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37D77CD91A8E80C200BAB659 /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 		370D0CAC1A9BDD6800D4FE27 /* FuturaStd-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FuturaStd-Bold.otf"; sourceTree = "<group>"; };
 		3761A7051A9E3931005125B2 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		3761A7071A9E962E005125B2 /* FuturaStd-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FuturaStd-Medium.otf"; sourceTree = "<group>"; };
+		3761A7091A9FA779005125B2 /* BorderedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedLabel.swift; sourceTree = "<group>"; };
 		37D77CD01A8E80C200BAB659 /* 38HRS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 38HRS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37D77CD41A8E80C200BAB659 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37D77CD51A8E80C200BAB659 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				37D77CDE1A8E80C200BAB659 /* LaunchScreen.xib */,
+				3761A7091A9FA779005125B2 /* BorderedLabel.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3761A70A1A9FA779005125B2 /* BorderedLabel.swift in Sources */,
 				37D77CD81A8E80C200BAB659 /* LocationViewController.swift in Sources */,
 				37EA13ED1A97B7B300A63589 /* Config.swift in Sources */,
 				370BAFF21A9D6E3200DC0EAB /* MainTabBarController.swift in Sources */,

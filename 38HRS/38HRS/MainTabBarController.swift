@@ -35,7 +35,7 @@ class MainTabBarController: UITabBarController {
         // Add white padding to the right
         var tabBarPaddingView = UIView(frame: CGRectMake(tabBarWidth, screenHeight - tabBarHeight + 0.5, screenWidth - tabBarWidth, tabBarHeight - 0.5))
         var topBorder = UIView(frame: CGRectMake(0, screenHeight - tabBarHeight + 0.5, screenWidth, 0.5))
-        topBorder.backgroundColor = UIColor.grayColor()
+        topBorder.backgroundColor = lightGrayColor
         tabBarPaddingView.backgroundColor = UIColor.whiteColor()
         
         self.view.addSubview(tabBarPaddingView)
