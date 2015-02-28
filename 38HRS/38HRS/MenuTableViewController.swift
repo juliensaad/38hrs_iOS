@@ -19,7 +19,6 @@ class MenuTableViewController: UITableViewController {
         self.tableView.delegate = self
         
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
-        self.tableView.allowsSelection = false
         self.tableView.backgroundColor = UIColor.whiteColor()
         
         // Do any additional setup after loading the view.
@@ -33,6 +32,20 @@ class MenuTableViewController: UITableViewController {
     
     override func prefersStatusBarHidden() -> Bool {
         return true
+    }
+    
+    func didClickHeader(sender: UIButton!){
+        var headerButton = sender as MenuHeaderButton
+        
+        //TODO: create pages and implement right actions
+        switch(headerButton.identifier){
+        case MenuHeaderButton.HeaderIndentifier.Cities:
+            println("Open city page")
+        case MenuHeaderButton.HeaderIndentifier.About:
+            println("Open about page")
+        default:
+            println("nothing")
+        }
     }
 
     /*
@@ -49,10 +62,12 @@ class MenuTableViewController: UITableViewController {
 
 // MARK: UITableViewDelegate
 extension MenuTableViewController: UITableViewDelegate{
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // Return the number of sections.
         return 3
     }
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch (section) {
         case 0:
@@ -61,72 +76,54 @@ extension MenuTableViewController: UITableViewDelegate{
             return 0
         }
     }
+    
+    override func tableView(tableView: UITableView, didHighlightRowAtIndexPath indexPath: NSIndexPath){
+        (tableView.cellForRowAtIndexPath(indexPath) as SwitchTableViewCell).toggleSwitch()
+    }
 }
 
 // MARK: UITableViewDataSource
 extension MenuTableViewController: UITableViewDataSource{
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = UITableViewCell()
-        var label = UILabel(frame: CGRectMake(contentMargin+5, 0, 0, 0))
-        label.font = UIFont(name: "FuturaStd-Bold", size: 17)
-        
-        var switchView = SwitchView()
-        switchView.drawRect(CGRectMake(0, 0, 0, 0))
-        switchView.frame.origin.x = tableView.frame.size.width - switchView.frame.width - contentMargin
-        switchView.center.y = cell.frame.height/2
-        cell.addSubview(switchView)
+        var cell = SwitchTableViewCell()
+        cell.awakeFromNib()
         
         switch (indexPath.item) {
         case 0:
-            label.text = "Culture"
+            cell.setTitle("Culture")
         case 1:
-            label.text = "Food"
-            switchView.setActive(true)
+            cell.setTitle("Food")
         case 2:
-            label.text = "Nightlife"
-            switchView.setActive(true)
+            cell.setTitle("Nightlife")
         case 3:
-            label.text = "Shopping"
+            cell.setTitle("Shopping")
         default:
-            label.text = ""
+            cell.setTitle("")
         }
         
-        label.sizeToFit()
-        label.center.y = cell.frame.height/2
-        cell.addSubview(label)
         return cell
         
     }
     
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let  headerCell = UIButton(frame: CGRectMake(0, 0, tableView.frame.size.width, headerHeight))
-        
-        var label = UILabel(frame: CGRectMake(contentMargin, 0, 0, 0))
-        label.font = UIFont(name: "FuturaStd-Bold", size: 22)
-        
-        var arrowImage = UIImage(named: "right_arrow")
-        var arrowView = UIImageView()
-        arrowView.image = arrowImage
-        arrowView.sizeToFit()
-        arrowView.frame.origin.x = tableView.frame.size.width - arrowView.frame.width - contentMargin
-        arrowView.center.y = headerHeight/2
+        let  headerCell = MenuHeaderButton(frame: CGRectMake(0, 0, tableView.frame.size.width, headerHeight))
+        headerCell.drawRect(headerCell.frame)
         
         switch (section) {
         case 0:
-            label.text = "FILTERS"
+            headerCell.setHeaderTitle("FILTERS")
+            headerCell.setHeaderIdentifier(MenuHeaderButton.HeaderIndentifier.Filters)
         case 1:
-            label.text = "CITIES"
-            headerCell.addSubview(arrowView)
+            headerCell.setHeaderTitle("CITIES")
+            headerCell.setHeaderIdentifier(MenuHeaderButton.HeaderIndentifier.Cities)
         case 2:
-            label.text = "ABOUT US"
-            headerCell.addSubview(arrowView)
+            headerCell.setHeaderTitle("ABOUT US")
+            headerCell.setHeaderIdentifier(MenuHeaderButton.HeaderIndentifier.About)
         default:
-            label.text = ""
+            headerCell.setHeaderTitle("")
         }
         
-        label.sizeToFit()
-        label.center.y = headerHeight/2
-        headerCell.addSubview(label)
+        headerCell.addTarget(self, action: "didClickHeader:", forControlEvents: .TouchUpInside)
         
         return headerCell
     }

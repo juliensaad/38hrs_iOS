@@ -18,6 +18,8 @@
 		3761A70C1A9FC5D5005125B2 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3761A70B1A9FC5D5005125B2 /* MainNavigationController.swift */; };
 		3761A7101A9FCBAF005125B2 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3761A70F1A9FCBAF005125B2 /* MenuTableViewController.swift */; };
 		37D1B3B91AA1876400BED021 /* SwitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1B3B81AA1876400BED021 /* SwitchView.swift */; };
+		37D1B3BB1AA213C000BED021 /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1B3BA1AA213C000BED021 /* SwitchTableViewCell.swift */; };
+		37D1B3BD1AA21D9700BED021 /* MenuHeaderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1B3BC1AA21D9700BED021 /* MenuHeaderButton.swift */; };
 		37D77CD61A8E80C200BAB659 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D77CD51A8E80C200BAB659 /* AppDelegate.swift */; };
 		37D77CD81A8E80C200BAB659 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D77CD71A8E80C200BAB659 /* LocationViewController.swift */; };
 		37D77CDB1A8E80C200BAB659 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37D77CD91A8E80C200BAB659 /* Main.storyboard */; };
@@ -53,6 +55,8 @@
 		3761A70B1A9FC5D5005125B2 /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		3761A70F1A9FCBAF005125B2 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		37D1B3B81AA1876400BED021 /* SwitchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchView.swift; sourceTree = "<group>"; };
+		37D1B3BA1AA213C000BED021 /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
+		37D1B3BC1AA21D9700BED021 /* MenuHeaderButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuHeaderButton.swift; sourceTree = "<group>"; };
 		37D77CD01A8E80C200BAB659 /* 38HRS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 38HRS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37D77CD41A8E80C200BAB659 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37D77CD51A8E80C200BAB659 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -226,6 +230,8 @@
 				37D77CDE1A8E80C200BAB659 /* LaunchScreen.xib */,
 				3761A7091A9FA779005125B2 /* BorderedLabel.swift */,
 				37D1B3B81AA1876400BED021 /* SwitchView.swift */,
+				37D1B3BA1AA213C000BED021 /* SwitchTableViewCell.swift */,
+				37D1B3BC1AA21D9700BED021 /* MenuHeaderButton.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -377,6 +383,7 @@
 			files = (
 				373934E81A9FD08300B92E2E /* ENSideMenu.swift in Sources */,
 				3761A70C1A9FC5D5005125B2 /* MainNavigationController.swift in Sources */,
+				37D1B3BB1AA213C000BED021 /* SwitchTableViewCell.swift in Sources */,
 				3761A70A1A9FA779005125B2 /* BorderedLabel.swift in Sources */,
 				37D77CD81A8E80C200BAB659 /* LocationViewController.swift in Sources */,
 				37EA13ED1A97B7B300A63589 /* Config.swift in Sources */,
@@ -385,6 +392,7 @@
 				370BAFF41A9D825500DC0EAB /* KingViewController.swift in Sources */,
 				37D77CD61A8E80C200BAB659 /* AppDelegate.swift in Sources */,
 				373934E91A9FD08300B92E2E /* ENSideMenuNavigationController.swift in Sources */,
+				37D1B3BD1AA21D9700BED021 /* MenuHeaderButton.swift in Sources */,
 				37D1B3B91AA1876400BED021 /* SwitchView.swift in Sources */,
 				37EA13F11A97C8AF00A63589 /* Reachability.m in Sources */,
 				37EA13FA1A98FCB400A63589 /* Location.swift in Sources */,

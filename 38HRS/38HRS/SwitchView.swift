@@ -19,6 +19,7 @@ class SwitchView: UIImageView {
     func setActive(active:Bool){
         self.active = active
         
+        // change image acroding to state
         var switchImage : UIImage!
         
         if(active){
