@@ -78,6 +78,7 @@ class LocationViewController: KingViewController {
     func setUpImageViewer(){
         // Imp
         self.automaticallyAdjustsScrollViewInsets = false
+        imageScrollView.frame.size.height = locationImageHeight
         
         // Create index view
         var indexView = UIView(frame: CGRectMake(0, 0, CGFloat(imageArray.count) * indexDimen, indexDimen))

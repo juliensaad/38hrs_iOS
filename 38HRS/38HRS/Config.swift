@@ -20,7 +20,7 @@ let smallMargin : CGFloat = 8
 
 let sideMenuWidth : CGFloat = 250
 
-let locationImageHeight : CGFloat = 230
+let locationImageHeight : CGFloat = 200
 
 
 extension UIColor {

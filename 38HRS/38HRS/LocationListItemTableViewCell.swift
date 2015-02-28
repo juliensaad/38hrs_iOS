@@ -26,6 +26,7 @@ class LocationListItemTableViewCell: UITableViewCell {
         
         // location image
         locationImageView.image = UIImage(named: "loc_image_two")
+        locationImageView.contentMode = UIViewContentMode.ScaleAspectFill
         self.addSubview(locationImageView)
         
         // Author image with rounded white border
@@ -56,12 +57,14 @@ class LocationListItemTableViewCell: UITableViewCell {
         self.addSubview(catTag)
         
         // Name label
-        nameLabel.frame.origin.x = contentMargin + catTag.frame.width + smallMargin
-        nameLabel.frame.origin.y = locationImageHeight + contentMargin
-        
         nameLabel.text = "Kratz orange"
         nameLabel.textColor = UIColor.blackColor()
         nameLabel.font = UIFont(name: "FuturaStd-Bold", size: 17)
+        nameLabel.sizeToFit()
+        
+        nameLabel.frame.origin.x = contentMargin + catTag.frame.width + smallMargin
+        nameLabel.frame.size.height += 5
+        nameLabel.center.y = catTag.center.y
         
         self.addSubview(nameLabel)
         
