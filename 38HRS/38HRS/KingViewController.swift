@@ -17,8 +17,6 @@ class KingViewController: UIViewController, ENSideMenuDelegate {
         
         mainNavigationController = (self.navigationController as MainNavigationController)
         
-        mainNavigationController.navigationBar.translucent = false
-        mainNavigationController.navigationBar.opaque = true
         self.extendedLayoutIncludesOpaqueBars = true
         
         self.sideMenuController()?.sideMenu?.delegate = self;

@@ -87,7 +87,7 @@ class LocationViewController: KingViewController {
             // Create image view in slider
             var imgView = UIImageView(frame: CGRectMake(CGFloat(i)*screenWidth, 0, screenWidth, imageScrollView.frame.height))
             imgView.image = imageArray[i]
-            
+            imgView.contentMode = UIViewContentMode.ScaleAspectFill
             imageScrollView.addSubview(imgView)
             
             // Create dot view for slider page

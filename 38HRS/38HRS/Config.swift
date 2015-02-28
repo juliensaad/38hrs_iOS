@@ -14,9 +14,12 @@ let lightGrayColor = UIColor(netHex:0xe4e4e4)
 
 let screenWidth = UIScreen.mainScreen().bounds.width
 let screenHeight = UIScreen.mainScreen().bounds.height
+let contentMargin : CGFloat = 20
 
 let sideMenuWidth : CGFloat = 250
-let contentMargin : CGFloat = 20
+
+let locationImageHeight : CGFloat = 230
+
 
 extension UIColor {
     convenience init(red: Int, green: Int, blue: Int) {
@@ -29,5 +32,14 @@ extension UIColor {
     
     convenience init(netHex:Int) {
         self.init(red:(netHex >> 16) & 0xff, green:(netHex >> 8) & 0xff, blue:netHex & 0xff)
+    }
+}
+
+extension UIView {
+    class func loadFromNibNamed(nibNamed: String, bundle : NSBundle? = nil) -> UIView? {
+        return UINib(
+            nibName: nibNamed,
+            bundle: bundle
+            ).instantiateWithOwner(nil, options: nil)[0] as? UIView
     }
 }

@@ -20,6 +20,8 @@
 		37D1B3B91AA1876400BED021 /* SwitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1B3B81AA1876400BED021 /* SwitchView.swift */; };
 		37D1B3BB1AA213C000BED021 /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1B3BA1AA213C000BED021 /* SwitchTableViewCell.swift */; };
 		37D1B3BD1AA21D9700BED021 /* MenuHeaderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1B3BC1AA21D9700BED021 /* MenuHeaderButton.swift */; };
+		37D1B3BF1AA2378200BED021 /* LocationListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1B3BE1AA2378200BED021 /* LocationListItemView.swift */; };
+		37D1B3C51AA2407400BED021 /* LocationListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1B3C41AA2407400BED021 /* LocationListTableViewController.swift */; };
 		37D77CD61A8E80C200BAB659 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D77CD51A8E80C200BAB659 /* AppDelegate.swift */; };
 		37D77CD81A8E80C200BAB659 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D77CD71A8E80C200BAB659 /* LocationViewController.swift */; };
 		37D77CDB1A8E80C200BAB659 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37D77CD91A8E80C200BAB659 /* Main.storyboard */; };
@@ -57,6 +59,8 @@
 		37D1B3B81AA1876400BED021 /* SwitchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchView.swift; sourceTree = "<group>"; };
 		37D1B3BA1AA213C000BED021 /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
 		37D1B3BC1AA21D9700BED021 /* MenuHeaderButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuHeaderButton.swift; sourceTree = "<group>"; };
+		37D1B3BE1AA2378200BED021 /* LocationListItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationListItemView.swift; sourceTree = "<group>"; };
+		37D1B3C41AA2407400BED021 /* LocationListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationListTableViewController.swift; sourceTree = "<group>"; };
 		37D77CD01A8E80C200BAB659 /* 38HRS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 38HRS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37D77CD41A8E80C200BAB659 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37D77CD51A8E80C200BAB659 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -211,6 +215,7 @@
 				37E7AB451AA00F0200A599E1 /* GlobalControllers */,
 				37D77CD71A8E80C200BAB659 /* LocationViewController.swift */,
 				3761A70F1A9FCBAF005125B2 /* MenuTableViewController.swift */,
+				37D1B3C41AA2407400BED021 /* LocationListTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -232,6 +237,7 @@
 				37D1B3B81AA1876400BED021 /* SwitchView.swift */,
 				37D1B3BA1AA213C000BED021 /* SwitchTableViewCell.swift */,
 				37D1B3BC1AA21D9700BED021 /* MenuHeaderButton.swift */,
+				37D1B3BE1AA2378200BED021 /* LocationListItemView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -390,8 +396,10 @@
 				3761A7101A9FCBAF005125B2 /* MenuTableViewController.swift in Sources */,
 				370BAFF21A9D6E3200DC0EAB /* MainTabBarController.swift in Sources */,
 				370BAFF41A9D825500DC0EAB /* KingViewController.swift in Sources */,
+				37D1B3BF1AA2378200BED021 /* LocationListItemView.swift in Sources */,
 				37D77CD61A8E80C200BAB659 /* AppDelegate.swift in Sources */,
 				373934E91A9FD08300B92E2E /* ENSideMenuNavigationController.swift in Sources */,
+				37D1B3C51AA2407400BED021 /* LocationListTableViewController.swift in Sources */,
 				37D1B3BD1AA21D9700BED021 /* MenuHeaderButton.swift in Sources */,
 				37D1B3B91AA1876400BED021 /* SwitchView.swift in Sources */,
 				37EA13F11A97C8AF00A63589 /* Reachability.m in Sources */,

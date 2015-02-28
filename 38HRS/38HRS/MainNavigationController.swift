@@ -15,6 +15,8 @@ class MainNavigationController: ENSideMenuNavigationController  {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationBar.translucent = false
+        self.navigationBar.opaque = true
         
         sideMenu = ENSideMenu(sourceView: self.view, menuTableViewController: MenuTableViewController(), menuPosition:.Left)
         sideMenu?.menuWidth = sideMenuWidth
