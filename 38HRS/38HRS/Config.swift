@@ -14,7 +14,9 @@ let lightGrayColor = UIColor(netHex:0xe4e4e4)
 
 let screenWidth = UIScreen.mainScreen().bounds.width
 let screenHeight = UIScreen.mainScreen().bounds.height
+
 let contentMargin : CGFloat = 20
+let smallMargin : CGFloat = 8
 
 let sideMenuWidth : CGFloat = 250
 

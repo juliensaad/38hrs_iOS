@@ -28,6 +28,5 @@ class BorderedLabel: UILabel {
         self.layer.borderColor = greenColor.CGColor
         self.layer.borderWidth = 1.0
     }
-    
 
 }

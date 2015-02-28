@@ -51,7 +51,7 @@ extension LocationListTableViewController: UITableViewDelegate{
 extension LocationListTableViewController: UITableViewDataSource{
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = LocationListItemView()
+        var cell = LocationListItemTableViewCell()
         cell.awakeFromNib()
         return cell
     }
