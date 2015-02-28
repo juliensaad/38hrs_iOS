@@ -51,7 +51,7 @@ class LocationViewController: KingViewController {
     
     func buildUI(){
         // nav bar
-        navItem.leftBarButtonItem?
+        navItem.leftBarButtonItem?.tintColor = darkGrayColor
         navItem.rightBarButtonItem?.tintColor = darkGrayColor
         
         // Cat tag
@@ -78,7 +78,6 @@ class LocationViewController: KingViewController {
     func setUpImageViewer(){
         // Imp
         self.automaticallyAdjustsScrollViewInsets = false
-        imageScrollView.frame.size.height = locationImageHeight
         
         // Create index view
         var indexView = UIView(frame: CGRectMake(0, 0, CGFloat(imageArray.count) * indexDimen, indexDimen))
@@ -117,7 +116,9 @@ class LocationViewController: KingViewController {
     }
     
     @IBAction func didPressNavAddButton(sender: AnyObject) {
-        self.toggleSideMenuView()
+    }
+    @IBAction func didPressNavBackButton(sender: AnyObject) {
+        mainNavigationController.popViewControllerAnimated(true)
     }
     
     override func didReceiveMemoryWarning() {

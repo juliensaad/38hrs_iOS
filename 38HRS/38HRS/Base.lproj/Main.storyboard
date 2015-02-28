@@ -18,21 +18,15 @@
         <!--Location View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LocationViewController" customModule="_8HRS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="LocationViewController" storyboardIdentifier="LocationViewController" id="BYZ-38-t0r" customClass="LocationViewController" customModule="_8HRS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQ5-KG-bAN">
-                                <rect key="frame" x="0.0" y="64" width="320" height="184"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="184" id="TZ3-Dl-zAJ"/>
-                                </constraints>
-                            </scrollView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0EK-rT-d8S" customClass="BorderedLabel" customModule="_8HRS" customModuleProvider="target">
                                 <rect key="frame" x="20" y="268" width="47.5" height="17"/>
                                 <fontDescription key="fontDescription" name="FuturaStd-Bold" family="Futura Std" pointSize="17"/>
@@ -68,7 +62,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPv-HR-aHw">
-                                <rect key="frame" x="20" y="468" width="280" height="40"/>
+                                <rect key="frame" x="20" y="419" width="280" height="40"/>
                                 <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="ktP-kq-UiT"/>
@@ -79,6 +73,12 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQ5-KG-bAN">
+                                <rect key="frame" x="0.0" y="64" width="320" height="184"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="TZ3-Dl-zAJ"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -105,6 +105,9 @@
                     <navigationItem key="navigationItem" id="W0H-M4-jYi">
                         <barButtonItem key="leftBarButtonItem" image="nav_back" id="yqo-tl-Cau">
                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="didPressNavBackButton:" destination="BYZ-38-t0r" id="W3u-aC-sKG"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="location_nav_plus" id="xew-rk-6yx">
                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -211,7 +214,7 @@
             </objects>
             <point key="canvasLocation" x="760" y="-402"/>
         </scene>
-        <!--Location List Table View Controller-->
+        <!--Title-->
         <scene sceneID="uE0-yd-S9r">
             <objects>
                 <tableViewController id="cfc-q7-lXh" customClass="LocationListTableViewController" customModule="_8HRS" customModuleProvider="target" sceneMemberID="viewController">
@@ -232,11 +235,26 @@
                             <outlet property="delegate" destination="cfc-q7-lXh" id="Zoy-Jy-1vV"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="H4c-Zi-SE6"/>
+                    <navigationItem key="navigationItem" title="Title" id="S4d-3Y-LdW">
+                        <barButtonItem key="leftBarButtonItem" image="burger" id="yYx-Id-3RL">
+                            <connections>
+                                <action selector="didClickNavMenuButton:" destination="cfc-q7-lXh" id="fTE-2J-UzU"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="nav_map" id="f9N-c9-uPd">
+                            <connections>
+                                <action selector="didClickNavMapButton:" destination="cfc-q7-lXh" id="Uka-q9-Zcn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="navItem" destination="S4d-3Y-LdW" id="FPg-5E-64E"/>
+                        <segue destination="BYZ-38-t0r" kind="push" id="TIR-Dh-8kB"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CMC-2a-9qC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1122" y="-558"/>
+            <point key="canvasLocation" x="1292" y="-402"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="R3N-kb-Xw6">
@@ -278,8 +296,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="burger" width="20" height="15"/>
         <image name="location_nav_plus" width="24" height="24"/>
         <image name="nav_back" width="27" height="19"/>
+        <image name="nav_map" width="26" height="25"/>
         <image name="tab_icon_cur" width="24" height="24"/>
         <image name="tab_icon_it" width="27" height="24"/>
         <image name="tab_icon_loc" width="21" height="24"/>

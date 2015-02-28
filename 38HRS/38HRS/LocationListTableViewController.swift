@@ -10,10 +10,16 @@ import UIKit
 
 class LocationListTableViewController: UITableViewController {
 
-
+    private var mainNavigationController : MainNavigationController!
+    @IBOutlet weak var navItem: UINavigationItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.extendedLayoutIncludesOpaqueBars = true
+        mainNavigationController = (self.navigationController as MainNavigationController)
+        
+        navItem.leftBarButtonItem?.tintColor = darkGrayColor
+        navItem.rightBarButtonItem?.tintColor = darkGrayColor
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
@@ -25,6 +31,14 @@ class LocationListTableViewController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func didClickNavMenuButton(sender: AnyObject) {
+        mainNavigationController.sideMenu?.showSideMenu()
+    }
+    
+    @IBAction func didClickNavMapButton(sender: AnyObject) {
+        
     }
 
 }
@@ -38,12 +52,14 @@ extension LocationListTableViewController: UITableViewDelegate{
     }
     
     override func tableView(tableView: UITableView, didHighlightRowAtIndexPath indexPath: NSIndexPath){
-        //(tableView.cellForRowAtIndexPath(indexPath) as SwitchTableViewCell).toggleSwitch()
-        print("coucou")
+        let locationViewController = self.storyboard?.instantiateViewControllerWithIdentifier("LocationViewController") as LocationViewController
+        self.navigationController?.pushViewController(locationViewController, animated: true)
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat{
-        return locationImageHeight + 100
+        var tempCell = LocationListItemTableViewCell()
+        tempCell.awakeFromNib()
+        return tempCell.getCellHeight()
     }
 }
 

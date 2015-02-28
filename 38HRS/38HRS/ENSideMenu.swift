@@ -98,7 +98,7 @@ class ENSideMenu : NSObject {
         animator = UIDynamicAnimator(referenceView:sourceView)
         
         // Add right swipe gesture recognizer
-        let rightSwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: "handleGesture:")
+        /*let rightSwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: "handleGesture:")
         rightSwipeGestureRecognizer.direction =  UISwipeGestureRecognizerDirection.Right
         sourceView.addGestureRecognizer(rightSwipeGestureRecognizer)
         
@@ -113,7 +113,7 @@ class ENSideMenu : NSObject {
         else {
             sideMenuContainerView.addGestureRecognizer(rightSwipeGestureRecognizer)
             sourceView.addGestureRecognizer(leftSwipeGestureRecognizer)
-        }
+        }*/
         
     }
 

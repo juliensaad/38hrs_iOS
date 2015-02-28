@@ -8,7 +8,7 @@
 
 import UIKit
 
-class KingViewController: UIViewController, ENSideMenuDelegate {
+class KingViewController: UIViewController {
 
     var mainNavigationController : MainNavigationController!
     
@@ -18,8 +18,6 @@ class KingViewController: UIViewController, ENSideMenuDelegate {
         mainNavigationController = (self.navigationController as MainNavigationController)
         
         self.extendedLayoutIncludesOpaqueBars = true
-        
-        self.sideMenuController()?.sideMenu?.delegate = self;
     }
     
     override func viewDidLayoutSubviews() {
@@ -31,18 +29,6 @@ class KingViewController: UIViewController, ENSideMenuDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK: - ENSideMenu Delegate
-    func sideMenuWillOpen() {
-        mainNavigationController.showCover()
-    }
-    
-    func sideMenuWillClose() {
-    }
-    
-    func sideMenuShouldOpenSideMenu() -> Bool {
-        println("sideMenuShouldOpenSideMenu")
-        return true;
-    }
 
     /*
     // MARK: - Navigation

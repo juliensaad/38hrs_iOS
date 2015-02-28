@@ -11,6 +11,7 @@ import UIKit
 class LocationListItemTableViewCell: UITableViewCell {
     
     private var authorImageDimension : CGFloat = 60
+    public var cellHeight : CGFloat!
     
     private var locationImageView = UIImageView(frame: CGRectMake(0, 0, screenWidth, locationImageHeight))
     private var authorImageView = UIImageView()
@@ -68,8 +69,11 @@ class LocationListItemTableViewCell: UITableViewCell {
         
         self.addSubview(nameLabel)
         
-        self.sizeToFit()
+        self.cellHeight = catTag.frame.origin.y + catTag.frame.height + contentMargin
     }
     
+    func getCellHeight() -> CGFloat{
+        return self.cellHeight
+    }
 
 }

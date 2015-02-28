@@ -21,6 +21,7 @@ class MainNavigationController: ENSideMenuNavigationController  {
         sideMenu = ENSideMenu(sourceView: self.view, menuTableViewController: MenuTableViewController(), menuPosition:.Left)
         sideMenu?.menuWidth = sideMenuWidth
         sideMenu?.bouncingEnabled = false
+        sideMenu?.delegate = self;
         
         coverView.backgroundColor = UIColor.blackColor()
         coverView.alpha = 0
@@ -36,8 +37,6 @@ class MainNavigationController: ENSideMenuNavigationController  {
     
     func didClickCoverView(sender: UIButton!){
         sideMenu?.hideSideMenu()
-        hideCover()
-        //println("coucou")
     }
     
     func showCover(){
@@ -78,4 +77,21 @@ class MainNavigationController: ENSideMenuNavigationController  {
     }
     */
 
+}
+
+// MARK: - ENSideMenu Delegate
+extension MainNavigationController: ENSideMenuDelegate{
+    
+    func sideMenuWillOpen() {
+        self.showCover()
+    }
+    
+    func sideMenuWillClose() {
+        self.hideCover()
+    }
+    
+    func sideMenuShouldOpenSideMenu() -> Bool {
+        return true;
+    }
+    
 }
