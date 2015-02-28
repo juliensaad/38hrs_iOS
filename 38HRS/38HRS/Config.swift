@@ -16,6 +16,7 @@ let screenWidth = UIScreen.mainScreen().bounds.width
 let screenHeight = UIScreen.mainScreen().bounds.height
 
 let sideMenuWidth : CGFloat = 250
+let contentMargin : CGFloat = 20
 
 extension UIColor {
     convenience init(red: Int, green: Int, blue: Int) {

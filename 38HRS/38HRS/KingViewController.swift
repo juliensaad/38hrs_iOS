@@ -35,12 +35,10 @@ class KingViewController: UIViewController, ENSideMenuDelegate {
     
     // MARK: - ENSideMenu Delegate
     func sideMenuWillOpen() {
-        println("sideMenuWillOpen")
-        mainNavigationController.coverView.hidden = false
+        mainNavigationController.showCover()
     }
     
     func sideMenuWillClose() {
-        println("sideMenuWillClose")
     }
     
     func sideMenuShouldOpenSideMenu() -> Bool {

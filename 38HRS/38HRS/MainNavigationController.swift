@@ -10,19 +10,20 @@ import UIKit
 
 class MainNavigationController: ENSideMenuNavigationController  {
 
-    var coverView = UIView(frame: CGRectMake(0, 0, screenWidth, screenHeight))
+    var coverView = UIButton(frame: CGRectMake(0, 0, screenWidth, screenHeight))
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
         sideMenu = ENSideMenu(sourceView: self.view, menuTableViewController: MenuTableViewController(), menuPosition:.Left)
-        
         sideMenu?.menuWidth = sideMenuWidth
+        sideMenu?.bouncingEnabled = false
         
-        coverView.backgroundColor = UIColor.darkGrayColor()
-        coverView.alpha = 0.5
+        coverView.backgroundColor = UIColor.blackColor()
+        coverView.alpha = 0
         coverView.hidden = true
+        coverView.addTarget(self, action: "didClickCoverView:", forControlEvents: .TouchUpInside)
         self.view.addSubview(coverView)
     }
 
@@ -31,8 +32,37 @@ class MainNavigationController: ENSideMenuNavigationController  {
         // Dispose of any resources that can be recreated.
     }
     
-    func showMenu(){
+    func didClickCoverView(sender: UIButton!){
+        sideMenu?.hideSideMenu()
+        hideCover()
+        //println("coucou")
+    }
+    
+    func showCover(){
+        let transitionOptions = UIViewAnimationOptions.CurveLinear
         
+        coverView.hidden = false
+        
+        UIView.transitionWithView(self.view, duration: 0.5, options: transitionOptions, animations: {
+            
+            self.coverView.alpha = 0.7
+            
+            }, completion: { finished in
+        })
+        
+    }
+    
+    func hideCover(){
+        let transitionOptions = UIViewAnimationOptions.CurveEaseOut
+        
+        UIView.transitionWithView(self.view, duration: 0.5, options: transitionOptions, animations: {
+            
+            self.coverView.alpha = 0
+            
+            }, completion: { finished in
+            
+                self.coverView.hidden = true
+        })
     }
     
 

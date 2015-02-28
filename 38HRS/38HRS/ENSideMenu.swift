@@ -207,8 +207,8 @@ class ENSideMenu : NSObject {
             animator.addBehavior(pushBehavior)
             
             let menuViewBehavior = UIDynamicItemBehavior(items: [sideMenuContainerView])
-            menuViewBehavior.elasticity = 0.25
-            //animator.addBehavior(menuViewBehavior)
+            menuViewBehavior.elasticity = 0
+            animator.addBehavior(menuViewBehavior)
             
         }
         else {
