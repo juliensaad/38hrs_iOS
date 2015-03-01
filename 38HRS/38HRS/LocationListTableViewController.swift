@@ -40,6 +40,11 @@ class LocationListTableViewController: UITableViewController {
     @IBAction func didClickNavMapButton(sender: AnyObject) {
         
     }
+    
+    func didClickName(sender : UIButton?){
+        let locationViewController = self.storyboard?.instantiateViewControllerWithIdentifier("LocationViewController") as LocationViewController
+        self.navigationController?.pushViewController(locationViewController, animated: true)
+    }
 
 }
 
@@ -52,8 +57,7 @@ extension LocationListTableViewController: UITableViewDelegate{
     }
     
     override func tableView(tableView: UITableView, didHighlightRowAtIndexPath indexPath: NSIndexPath){
-        let locationViewController = self.storyboard?.instantiateViewControllerWithIdentifier("LocationViewController") as LocationViewController
-        self.navigationController?.pushViewController(locationViewController, animated: true)
+        
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat{
@@ -69,6 +73,9 @@ extension LocationListTableViewController: UITableViewDataSource{
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = LocationListItemTableViewCell()
         cell.awakeFromNib()
+        
+        cell.nameLabel.addTarget(self, action: "didClickName:", forControlEvents: .TouchUpInside)
+        
         return cell
     }
     

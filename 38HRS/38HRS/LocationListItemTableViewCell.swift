@@ -11,12 +11,12 @@ import UIKit
 class LocationListItemTableViewCell: UITableViewCell {
     
     private var authorImageDimension : CGFloat = 60
-    public var cellHeight : CGFloat!
+    var cellHeight : CGFloat!
     
-    private var locationImageView = UIImageView(frame: CGRectMake(0, 0, screenWidth, locationImageHeight))
+    var locationImageButton = UIImageView(frame: CGRectMake(0, 0, screenWidth, locationImageHeight))
     private var authorImageView = UIImageView()
     private var catTag = BorderedLabel()
-    private var nameLabel = UILabel()
+    var nameLabel = UIButton()
     
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
@@ -26,9 +26,9 @@ class LocationListItemTableViewCell: UITableViewCell {
         self.selectionStyle = UITableViewCellSelectionStyle.None
         
         // location image
-        locationImageView.image = UIImage(named: "loc_image_two")
-        locationImageView.contentMode = UIViewContentMode.ScaleAspectFill
-        self.addSubview(locationImageView)
+        locationImageButton.image = UIImage(named: "loc_image_two")
+        locationImageButton.contentMode = UIViewContentMode.ScaleAspectFill
+        self.addSubview(locationImageButton)
         
         // Author image with rounded white border
         authorImageView.image = UIImage(named: "nico")
@@ -58,14 +58,19 @@ class LocationListItemTableViewCell: UITableViewCell {
         self.addSubview(catTag)
         
         // Name label
-        nameLabel.text = "Kratz orange"
-        nameLabel.textColor = UIColor.blackColor()
-        nameLabel.font = UIFont(name: "FuturaStd-Bold", size: 17)
+        var name = UILabel()
+        name.text = "Kratz Orange"
+        name.font = UIFont(name: "FuturaStd-Bold", size: 17)
+        name.sizeToFit()
+        name.frame.size.height += 5
+        
+        nameLabel.addSubview(name)
         nameLabel.sizeToFit()
         
         nameLabel.frame.origin.x = contentMargin + catTag.frame.width + smallMargin
-        nameLabel.frame.size.height += 5
         nameLabel.center.y = catTag.center.y
+        
+        name.center.y = nameLabel.frame.height/2
         
         self.addSubview(nameLabel)
         
