@@ -66,10 +66,11 @@ class LocationListItemTableViewCell: UITableViewCell {
         
         nameLabel.addSubview(name)
         nameLabel.sizeToFit()
+        nameLabel.frame.size.width = name.frame.width
         
         nameLabel.frame.origin.x = contentMargin + catTag.frame.width + smallMargin
         nameLabel.center.y = catTag.center.y
-        
+            
         name.center.y = nameLabel.frame.height/2
         
         self.addSubview(nameLabel)
