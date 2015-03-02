@@ -10,9 +10,10 @@ import Foundation
 
 class ModelInterfaceSingleton{
     
-    private var client = CDAClient(spaceKey:"vf9b8vvy97rq", accessToken:"6bba073a3322e16abcb71dc025666a3247f54bca1e043aeea6f5315047e2bf4f")
     private var defaults = NSUserDefaults.standardUserDefaults()
     let reachability: Reachability = Reachability.reachabilityForInternetConnection()
+    
+    var locations = [Location]()
     
     // Singleton logic
     class var sharedInstance: ModelInterfaceSingleton {
@@ -32,14 +33,16 @@ class ModelInterfaceSingleton{
     func getAppContent(){
         
         if Reachability.isReachableViaWiFi(reachability)() {
-            
+         
+            var client = CDAClient(spaceKey:"vf9b8vvy97rq", accessToken:"6bba073a3322e16abcb71dc025666a3247f54bca1e043aeea6f5315047e2bf4f")
+
             client.initialSynchronizationWithSuccess({ (response: CDAResponse!, space : CDASyncedSpace!) -> Void in
                 
                 println("From web : ")
                 
-                // self.createModelEntries(space.entries)
-                self.downloadAllAssets(space.assets)
-                
+                self.createModelEntries(space.entries)
+                // self.downloadAllAssets(space.assets)
+             
                 var entriData = NSKeyedArchiver.archivedDataWithRootObject(space.entries)
                 var assetData = NSKeyedArchiver.archivedDataWithRootObject(space.assets)
                 
@@ -69,6 +72,15 @@ class ModelInterfaceSingleton{
         
         for var i=0 ; i<entriesArray.count ; i++ {
             var entry = entriesArray[i] as CDAEntry
+            
+            if(entry.contentType.name == "Location"){
+                var location = Location(id: entry.identifier as String)
+
+              //  location.name = entry.fields["name"]? as String
+                //location.category = entry.fields["category"]? as String
+
+                println(entry.fields["name"]? as String)
+            }
             // self.amis.append(ami(name: entry.fields["name"] as String, age: entry.fields["age"] as Int))
         }
         

@@ -13,9 +13,13 @@ class MainTabBarController: UITabBarController {
     let tabBarWidth : CGFloat = screenWidth/2
     let tabBarHeight : CGFloat = 40
     
+    let modelSingleton = ModelInterfaceSingleton.sharedInstance
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        modelSingleton.getAppContent()
+        
         self.designTabBar()
     }
 

@@ -11,6 +11,7 @@ import UIKit
 class KingViewController: UIViewController {
 
     var mainNavigationController : MainNavigationController!
+    let modelSingleton = ModelInterfaceSingleton.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -9,7 +9,14 @@
 import Foundation
 
 class Location {
+    
+    var identifier : String!
     var name : String!
     var description : String!
+    var category : String!
+    
+    init(id: String){
+        self.identifier = id
+    }
     
 }

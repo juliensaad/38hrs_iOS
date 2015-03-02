@@ -28,6 +28,7 @@ class LocationListItemTableViewCell: UITableViewCell {
         // location image
         locationImageButton.image = UIImage(named: "loc_image_two")
         locationImageButton.contentMode = UIViewContentMode.ScaleAspectFill
+        locationImageButton.clipsToBounds = true
         self.addSubview(locationImageButton)
         
         // Author image with rounded white border
@@ -48,7 +49,7 @@ class LocationListItemTableViewCell: UITableViewCell {
         
         // Categorie tag
         catTag.frame.origin.x = contentMargin
-        catTag.frame.origin.y = locationImageHeight + contentMargin
+        catTag.frame.origin.y = locationImageButton.frame.height + contentMargin
         
         catTag.text = "Food"
         catTag.textColor = greenColor

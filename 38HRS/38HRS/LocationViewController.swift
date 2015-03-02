@@ -10,8 +10,6 @@ import UIKit
 
 class LocationViewController: KingViewController {
     
-    let modelSingleton = ModelInterfaceSingleton.sharedInstance
-    
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var catTag: BorderedLabel!
@@ -40,9 +38,6 @@ class LocationViewController: KingViewController {
         
         setUpImageViewer()
         buildUI()
-        
-        //modelSingleton.getAppContent()
-        //locationImage.image = modelSingleton.loadImage()
         
     }
     
@@ -88,6 +83,7 @@ class LocationViewController: KingViewController {
             var imgView = UIImageView(frame: CGRectMake(CGFloat(i)*screenWidth, 0, screenWidth, imageScrollView.frame.height))
             imgView.image = imageArray[i]
             imgView.contentMode = UIViewContentMode.ScaleAspectFill
+            imgView.clipsToBounds = true
             imageScrollView.addSubview(imgView)
             
             // Create dot view for slider page
