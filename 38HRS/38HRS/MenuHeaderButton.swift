@@ -12,14 +12,14 @@ import UIKit
 
 class MenuHeaderButton: UIButton {
     
-    enum HeaderIndentifier {
+    enum HeaderIdentifier {
         case Filters
         case Cities
         case About
         case Other
     }
     
-    var identifier = HeaderIndentifier.Other
+    var identifier = HeaderIdentifier.Other
     private var headerTitleLabel = UILabel()
     private var arrowView = UIImageView()
     
@@ -47,10 +47,10 @@ class MenuHeaderButton: UIButton {
         self.addSubview(headerTitleLabel)
     }
     
-    func setHeaderIdentifier(id: HeaderIndentifier){
+    func setHeaderIdentifier(id: HeaderIdentifier){
         self.identifier = id
         
-        if(id == HeaderIndentifier.Cities || id == HeaderIndentifier.About){
+        if(id == .Cities || id == .About){
             self.addSubview(arrowView)
         }
     }

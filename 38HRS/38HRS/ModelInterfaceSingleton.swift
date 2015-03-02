@@ -10,9 +10,13 @@ import Foundation
 
 class ModelInterfaceSingleton{
     
+    private let spaceKey = "vf9b8vvy97rq"
+    private let accessTolken = "6bba073a3322e16abcb71dc025666a3247f54bca1e043aeea6f5315047e2bf4f"
+    
     private var defaults = NSUserDefaults.standardUserDefaults()
     let reachability: Reachability = Reachability.reachabilityForInternetConnection()
     
+    var contentLoaded = false
     var locations = [Location]()
     
     // Singleton logic
@@ -29,12 +33,13 @@ class ModelInterfaceSingleton{
         return Static.instance!
     }
     
+    // MARK: Content loading
     // Get content from contentful or from defaults depending on connectivity
     func getAppContent(){
         
         if Reachability.isReachableViaWiFi(reachability)() {
          
-            var client = CDAClient(spaceKey:"vf9b8vvy97rq", accessToken:"6bba073a3322e16abcb71dc025666a3247f54bca1e043aeea6f5315047e2bf4f")
+            var client = CDAClient(spaceKey:self.spaceKey, accessToken:self.accessTolken)
 
             client.initialSynchronizationWithSuccess({ (response: CDAResponse!, space : CDASyncedSpace!) -> Void in
                 
@@ -63,40 +68,22 @@ class ModelInterfaceSingleton{
             var assetData = defaults.objectForKey("assets") as NSData
             var assets = NSKeyedUnarchiver.unarchiveObjectWithData(assetData) as NSArray
             
-            // self.createModelEntries(entries)
+            self.createModelEntries(entries)
         }
 
-    }
-    
-    private func createModelEntries(entriesArray :NSArray){
-        
-        for var i=0 ; i<entriesArray.count ; i++ {
-            var entry = entriesArray[i] as CDAEntry
-            
-            if(entry.contentType.name == "Location"){
-                var location = Location(id: entry.identifier as String)
-
-              //  location.name = entry.fields["name"]? as String
-                //location.category = entry.fields["category"]? as String
-
-                println(entry.fields["name"]? as String)
-            }
-            // self.amis.append(ami(name: entry.fields["name"] as String, age: entry.fields["age"] as Int))
-        }
-        
     }
     
     private func downloadAllAssets(assetsArray :NSArray){
         
         for var i=0 ; i<assetsArray.count ; i++ {
             var asset = assetsArray[i] as CDAAsset
-            self.getImageFromUrl(asset.URL)
+            self.saveAssetFromURL(asset)
         }
         println("done")
     }
     
-    private func getImageFromUrl(url : NSURL){
-        let data = NSData(contentsOfURL: url)
+    private func saveAssetFromURL(asset : CDAAsset){
+        let data = NSData(contentsOfURL: asset.URL)
         
         if(data != nil){
             let image = UIImage(data: data!)!
@@ -107,10 +94,50 @@ class ModelInterfaceSingleton{
         }
     }
     
-    func loadImage() -> UIImage{
+    func getLocalImage() -> UIImage{
         let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
         let destinationPath = documentsPath.stringByAppendingPathComponent("filename.jpg")
         
         return UIImage(contentsOfFile: destinationPath)!
+    }
+    
+    // MARK: Model Creation
+    private func createModelEntries(entriesArray :NSArray){
+        
+        for var i=0 ; i<entriesArray.count ; i++ {
+            var entry = entriesArray[i] as CDAEntry
+            
+            //if(entre.contentType)
+            
+            if(entry.contentType.name == "Location"){
+                addLocation(entry)
+                
+                
+                /*for var j=0 ; j<entry.fields.keys.array.count ; j++ {
+                println(entry.fields.keys.array[j])
+                }*/
+            }
+        }
+        
+        self.contentLoaded = true
+        NSNotificationCenter.defaultCenter().postNotificationName(contentLoadNotificationKey, object: self)
+    }
+    
+    private func addLocation(entry: CDAEntry){
+        
+        var location = Location(id: entry.identifier as String)
+        
+        if(entry.fields["name"] != nil){
+            location.name = entry.fields["name"]? as String
+        }
+        if(entry.fields["description"] != nil){
+            location.description = entry.fields["description"]? as String
+        }
+        if(entry.fields["category"] != nil){
+            var catEntry = entry.fields["category"] as CDAEntry
+            location.category = catEntry.fields["category"]? as String
+        }
+        
+        self.locations.append(location)
     }
 }

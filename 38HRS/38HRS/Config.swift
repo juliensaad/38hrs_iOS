@@ -8,6 +8,8 @@
 
 import Foundation
 
+let contentLoadNotificationKey = "CONTENTLOAD"
+
 let greenColor : UIColor = UIColor(netHex:0x00bc5c)
 let darkGrayColor = UIColor(netHex:0x737373)
 let lightGrayColor = UIColor(netHex:0xe4e4e4)

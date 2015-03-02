@@ -12,11 +12,15 @@ class MainNavigationController: ENSideMenuNavigationController  {
 
     var coverView = UIButton(frame: CGRectMake(0, 0, screenWidth, screenHeight))
     
+    let modelSingleton = ModelInterfaceSingleton.sharedInstance
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationBar.translucent = false
         self.navigationBar.opaque = true
+        
+        modelSingleton.getAppContent()
         
         sideMenu = ENSideMenu(sourceView: self.view, menuTableViewController: MenuTableViewController(), menuPosition:.Left)
         sideMenu?.menuWidth = sideMenuWidth
@@ -44,7 +48,7 @@ class MainNavigationController: ENSideMenuNavigationController  {
         
         coverView.hidden = false
         
-        UIView.transitionWithView(self.view, duration: 0.5, options: transitionOptions, animations: {
+        UIView.transitionWithView(self.view, duration: 0.4, options: transitionOptions, animations: {
             
             self.coverView.alpha = 0.7
             
@@ -56,7 +60,7 @@ class MainNavigationController: ENSideMenuNavigationController  {
     func hideCover(){
         let transitionOptions = UIViewAnimationOptions.CurveEaseOut
         
-        UIView.transitionWithView(self.view, duration: 0.5, options: transitionOptions, animations: {
+        UIView.transitionWithView(self.view, duration: 0.4, options: transitionOptions, animations: {
             
             self.coverView.alpha = 0
             

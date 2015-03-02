@@ -31,6 +31,8 @@
 		37EA13F11A97C8AF00A63589 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EA13F01A97C8AF00A63589 /* Reachability.m */; };
 		37EA13F31A97CAB200A63589 /* ModelInterfaceSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EA13F21A97CAB200A63589 /* ModelInterfaceSingleton.swift */; };
 		37EA13FA1A98FCB400A63589 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EA13F91A98FCB400A63589 /* Location.swift */; };
+		37F7AE051AA4B95B000597AC /* KingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F7AE041AA4B95B000597AC /* KingTableViewController.swift */; };
+		37F7AE071AA4D0F4000597AC /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F7AE061AA4D0F4000597AC /* Category.swift */; };
 		A1ADCF20934AF3EF40968B0F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3799F540AC59DD2663F189A /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +78,8 @@
 		37EA13F01A97C8AF00A63589 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		37EA13F21A97CAB200A63589 /* ModelInterfaceSingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelInterfaceSingleton.swift; sourceTree = "<group>"; };
 		37EA13F91A98FCB400A63589 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		37F7AE041AA4B95B000597AC /* KingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KingTableViewController.swift; sourceTree = "<group>"; };
+		37F7AE061AA4D0F4000597AC /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		A4BEC918D96C2D245C0828E4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E3799F540AC59DD2663F189A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -196,6 +200,7 @@
 				370BAFF11A9D6E3200DC0EAB /* MainTabBarController.swift */,
 				370BAFF31A9D825500DC0EAB /* KingViewController.swift */,
 				3761A70B1A9FC5D5005125B2 /* MainNavigationController.swift */,
+				37F7AE041AA4B95B000597AC /* KingTableViewController.swift */,
 			);
 			name = GlobalControllers;
 			sourceTree = "<group>";
@@ -225,6 +230,7 @@
 			children = (
 				37EA13F21A97CAB200A63589 /* ModelInterfaceSingleton.swift */,
 				37EA13F91A98FCB400A63589 /* Location.swift */,
+				37F7AE061AA4D0F4000597AC /* Category.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -390,6 +396,7 @@
 				373934E81A9FD08300B92E2E /* ENSideMenu.swift in Sources */,
 				3761A70C1A9FC5D5005125B2 /* MainNavigationController.swift in Sources */,
 				37D1B3BB1AA213C000BED021 /* SwitchTableViewCell.swift in Sources */,
+				37F7AE051AA4B95B000597AC /* KingTableViewController.swift in Sources */,
 				3761A70A1A9FA779005125B2 /* BorderedLabel.swift in Sources */,
 				37D77CD81A8E80C200BAB659 /* LocationViewController.swift in Sources */,
 				37EA13ED1A97B7B300A63589 /* Config.swift in Sources */,
@@ -397,6 +404,7 @@
 				370BAFF21A9D6E3200DC0EAB /* MainTabBarController.swift in Sources */,
 				370BAFF41A9D825500DC0EAB /* KingViewController.swift in Sources */,
 				37D1B3BF1AA2378200BED021 /* LocationListItemTableViewCell.swift in Sources */,
+				37F7AE071AA4D0F4000597AC /* Category.swift in Sources */,
 				37D77CD61A8E80C200BAB659 /* AppDelegate.swift in Sources */,
 				373934E91A9FD08300B92E2E /* ENSideMenuNavigationController.swift in Sources */,
 				37D1B3C51AA2407400BED021 /* LocationListTableViewController.swift in Sources */,

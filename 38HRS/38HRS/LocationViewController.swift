@@ -114,7 +114,7 @@ class LocationViewController: KingViewController {
     @IBAction func didPressNavAddButton(sender: AnyObject) {
     }
     @IBAction func didPressNavBackButton(sender: AnyObject) {
-        mainNavigationController.popViewControllerAnimated(true)
+        self.directNavigationController.popViewControllerAnimated(true)
     }
     
     override func didReceiveMemoryWarning() {

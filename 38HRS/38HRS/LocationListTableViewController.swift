@@ -8,15 +8,12 @@
 
 import UIKit
 
-class LocationListTableViewController: UITableViewController {
+class LocationListTableViewController: KingTableViewController {
 
-    private var mainNavigationController : MainNavigationController!
     @IBOutlet weak var navItem: UINavigationItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.extendedLayoutIncludesOpaqueBars = true
-        mainNavigationController = (self.navigationController as MainNavigationController)
         
         navItem.leftBarButtonItem?.tintColor = darkGrayColor
         navItem.rightBarButtonItem?.tintColor = darkGrayColor
@@ -26,6 +23,12 @@ class LocationListTableViewController: UITableViewController {
         
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         self.tableView.backgroundColor = UIColor.whiteColor()
+        
+        self.detectContentState()
+    }
+    
+    override func updateUI() {
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,7 +46,7 @@ class LocationListTableViewController: UITableViewController {
     
     func didClickName(sender : UIButton?){
         let locationViewController = self.storyboard?.instantiateViewControllerWithIdentifier("LocationViewController") as LocationViewController
-        self.navigationController?.pushViewController(locationViewController, animated: true)
+        self.directNavigationController.pushViewController(locationViewController, animated: true)
     }
 
 }
@@ -53,7 +56,7 @@ extension LocationListTableViewController: UITableViewDelegate{
 
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return modelSingleton.locations.count
     }
     
     override func tableView(tableView: UITableView, didHighlightRowAtIndexPath indexPath: NSIndexPath){
@@ -71,8 +74,12 @@ extension LocationListTableViewController: UITableViewDelegate{
 extension LocationListTableViewController: UITableViewDataSource{
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var location = modelSingleton.locations[indexPath.item]
+        
         var cell = LocationListItemTableViewCell()
         cell.awakeFromNib()
+        
+        cell.setName(location.name)
         
         cell.nameLabel.addTarget(self, action: "didClickName:", forControlEvents: .TouchUpInside)
         

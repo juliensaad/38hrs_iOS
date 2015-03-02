@@ -13,12 +13,8 @@ class MainTabBarController: UITabBarController {
     let tabBarWidth : CGFloat = screenWidth/2
     let tabBarHeight : CGFloat = 40
     
-    let modelSingleton = ModelInterfaceSingleton.sharedInstance
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        modelSingleton.getAppContent()
         
         self.designTabBar()
     }
@@ -47,6 +43,10 @@ class MainTabBarController: UITabBarController {
         
         self.view.addSubview(tabBarPaddingView)
         self.view.addSubview(topBorder)
+    }
+    
+    func getNavigationController() -> MainNavigationController{
+        return self.navigationController as MainNavigationController
     }
     /*
     // MARK: - Navigation

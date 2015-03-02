@@ -39,9 +39,9 @@ class MenuTableViewController: UITableViewController {
         
         //TODO: create pages and implement right actions
         switch(headerButton.identifier){
-        case MenuHeaderButton.HeaderIndentifier.Cities:
+        case .Cities:
             println("Open city page")
-        case MenuHeaderButton.HeaderIndentifier.About:
+        case .About:
             println("Open about page")
         default:
             println("nothing")
@@ -112,13 +112,13 @@ extension MenuTableViewController: UITableViewDataSource{
         switch (section) {
         case 0:
             headerCell.setHeaderTitle("FILTERS")
-            headerCell.setHeaderIdentifier(MenuHeaderButton.HeaderIndentifier.Filters)
+            headerCell.setHeaderIdentifier(.Filters)
         case 1:
             headerCell.setHeaderTitle("CITIES")
-            headerCell.setHeaderIdentifier(MenuHeaderButton.HeaderIndentifier.Cities)
+            headerCell.setHeaderIdentifier(.Cities)
         case 2:
             headerCell.setHeaderTitle("ABOUT US")
-            headerCell.setHeaderIdentifier(MenuHeaderButton.HeaderIndentifier.About)
+            headerCell.setHeaderIdentifier(.About)
         default:
             headerCell.setHeaderTitle("")
         }

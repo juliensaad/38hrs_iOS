@@ -59,8 +59,15 @@ class LocationListItemTableViewCell: UITableViewCell {
         self.addSubview(catTag)
         
         // Name label
+        
+        self.addSubview(nameLabel)
+        
+        self.cellHeight = catTag.frame.origin.y + catTag.frame.height + contentMargin
+    }
+    
+    func setName(locName: String){
         var name = UILabel()
-        name.text = "Kratz Orange"
+        name.text = locName
         name.font = UIFont(name: "FuturaStd-Bold", size: 17)
         name.sizeToFit()
         name.frame.size.height += 5
@@ -71,12 +78,8 @@ class LocationListItemTableViewCell: UITableViewCell {
         
         nameLabel.frame.origin.x = contentMargin + catTag.frame.width + smallMargin
         nameLabel.center.y = catTag.center.y
-            
+        
         name.center.y = nameLabel.frame.height/2
-        
-        self.addSubview(nameLabel)
-        
-        self.cellHeight = catTag.frame.origin.y + catTag.frame.height + contentMargin
     }
     
     func getCellHeight() -> CGFloat{
