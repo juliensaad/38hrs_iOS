@@ -9,7 +9,7 @@
 import UIKit
 
 
-class MenuTableViewController: UITableViewController {
+class MenuTableViewController: KingTableViewController {
 
     private var headerHeight : CGFloat = 50.0
     
@@ -21,8 +21,7 @@ class MenuTableViewController: UITableViewController {
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         self.tableView.backgroundColor = UIColor.whiteColor()
         
-        // Do any additional setup after loading the view.
-        
+        self.detectContentState()
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,20 +31,6 @@ class MenuTableViewController: UITableViewController {
     
     override func prefersStatusBarHidden() -> Bool {
         return true
-    }
-    
-    func didClickHeader(sender: UIButton!){
-        var headerButton = sender as MenuHeaderButton
-        
-        //TODO: create pages and implement right actions
-        switch(headerButton.identifier){
-        case .Cities:
-            println("Open city page")
-        case .About:
-            println("Open about page")
-        default:
-            println("nothing")
-        }
     }
 
     /*
@@ -71,7 +56,7 @@ extension MenuTableViewController: UITableViewDelegate{
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch (section) {
         case 0:
-            return 4
+            return modelSingleton.categories.count
         default:
             return 0
         }
@@ -88,18 +73,7 @@ extension MenuTableViewController: UITableViewDataSource{
         var cell = SwitchTableViewCell()
         cell.awakeFromNib()
         
-        switch (indexPath.item) {
-        case 0:
-            cell.setTitle("Culture")
-        case 1:
-            cell.setTitle("Food")
-        case 2:
-            cell.setTitle("Nightlife")
-        case 3:
-            cell.setTitle("Shopping")
-        default:
-            cell.setTitle("")
-        }
+        cell.setTitle(modelSingleton.categories[indexPath.item].name)
         
         return cell
         
@@ -126,6 +100,20 @@ extension MenuTableViewController: UITableViewDataSource{
         headerCell.addTarget(self, action: "didClickHeader:", forControlEvents: .TouchUpInside)
         
         return headerCell
+    }
+    
+    func didClickHeader(sender: UIButton!){
+        var headerButton = sender as MenuHeaderButton
+        
+        //TODO: create pages and implement right actions
+        switch(headerButton.identifier){
+        case .Cities:
+            println("Open city page")
+        case .About:
+            println("Open about page")
+        default:
+            println("nothing")
+        }
     }
     
     override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

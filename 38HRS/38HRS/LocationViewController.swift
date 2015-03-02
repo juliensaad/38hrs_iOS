@@ -61,7 +61,7 @@ class LocationViewController: KingViewController {
         nameLabel.text = location.name
         
         // Author label
-        let underlineAttriString = NSAttributedString(string: "Nathalie S.", attributes: [NSUnderlineStyleAttributeName: NSUnderlineStyle.StyleSingle.rawValue])
+        let underlineAttriString = NSAttributedString(string: location.curator.name, attributes: [NSUnderlineStyleAttributeName: NSUnderlineStyle.StyleSingle.rawValue])
         authorLabel.attributedText = underlineAttriString
         authorLabel.textColor = greenColor
         

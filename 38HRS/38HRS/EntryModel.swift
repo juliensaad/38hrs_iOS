@@ -9,6 +9,7 @@
 import Foundation
 
 class EntryModel {
+    
     var identifier : String!
     var name : String!
     
@@ -16,4 +17,5 @@ class EntryModel {
         self.identifier = id
         self.name = name
     }
+    
 }

@@ -19,6 +19,7 @@ class ModelInterfaceSingleton{
     var contentLoaded = false
     var locations = [Location]()
     var categories = [Category]()
+    var curators = [Curator]()
     
     // Singleton logic
     class var sharedInstance: ModelInterfaceSingleton {
@@ -112,13 +113,16 @@ class ModelInterfaceSingleton{
                 addCategory(entry)
             }
             
+            if(entry.contentType.name == "Curator"){
+                addCurator(entry)
+            }
+            
             if(entry.contentType.name == "Location"){
                 addLocation(entry)
-                
-                
                 /*for var j=0 ; j<entry.fields.keys.array.count ; j++ {
-                println(entry.fields.keys.array[j])
-                }*/
+                    println(entry.fields.keys.array[j])
+                }
+                println("-----------")*/
             }
         }
         
@@ -128,7 +132,7 @@ class ModelInterfaceSingleton{
     
     private func addLocation(entry: CDAEntry){
         
-        // Location already exist or has noname
+        // Location already exist or has no name
         if(getLocationFromId(entry.identifier) != nil || entry.fields["name"] == nil){
             return
         }
@@ -143,19 +147,35 @@ class ModelInterfaceSingleton{
             addCategory(catEntry)
             location.category = getCategoryFromId(catEntry.identifier)
         }
+        if(entry.fields["curator"] != nil){
+            var curEntry = entry.fields["curator"] as CDAEntry
+            addCurator(curEntry)
+            location.curator = getCuratorFromId(curEntry.identifier)
+        }
         
         self.locations.append(location)
     }
     
     private func addCategory(entry: CDAEntry){
         
-        // Category already exists
+        // Category already exists or has no name
         if(getCategoryFromId(entry.identifier) != nil || entry.fields["category"] == nil){
             return
         }
         
         var category = Category(id: entry.identifier, name: entry.fields["category"]? as String)
         self.categories.append(category)
+    }
+    
+    private func addCurator(entry: CDAEntry){
+        
+        // Curator already exists or has no name
+        if(getCuratorFromId(entry.identifier) != nil || entry.fields["name"] == nil){
+            return
+        }
+        
+        var curator = Curator(id: entry.identifier, name: entry.fields["name"]? as String)
+        self.curators.append(curator)
     }
     
     func getCategoryFromId(id: String) -> Category?{
@@ -171,6 +191,15 @@ class ModelInterfaceSingleton{
         for loc in self.locations{
             if(loc.identifier == id){
                 return loc
+            }
+        }
+        return nil
+    }
+    
+    func getCuratorFromId(id: String) -> Curator?{
+        for cur in self.curators{
+            if(cur.identifier == id){
+                return cur
             }
         }
         return nil

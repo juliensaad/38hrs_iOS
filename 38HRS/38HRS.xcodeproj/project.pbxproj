@@ -34,6 +34,7 @@
 		37F7AE051AA4B95B000597AC /* KingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F7AE041AA4B95B000597AC /* KingTableViewController.swift */; };
 		37F7AE071AA4D0F4000597AC /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F7AE061AA4D0F4000597AC /* Category.swift */; };
 		37F7AE091AA4E9E9000597AC /* EntryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F7AE081AA4E9E9000597AC /* EntryModel.swift */; };
+		37F7AE0B1AA4FC0C000597AC /* Curator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F7AE0A1AA4FC0C000597AC /* Curator.swift */; };
 		A1ADCF20934AF3EF40968B0F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3799F540AC59DD2663F189A /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +83,7 @@
 		37F7AE041AA4B95B000597AC /* KingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KingTableViewController.swift; sourceTree = "<group>"; };
 		37F7AE061AA4D0F4000597AC /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		37F7AE081AA4E9E9000597AC /* EntryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryModel.swift; sourceTree = "<group>"; };
+		37F7AE0A1AA4FC0C000597AC /* Curator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Curator.swift; sourceTree = "<group>"; };
 		A4BEC918D96C2D245C0828E4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E3799F540AC59DD2663F189A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -234,6 +236,7 @@
 				37EA13F91A98FCB400A63589 /* Location.swift */,
 				37F7AE061AA4D0F4000597AC /* Category.swift */,
 				37F7AE081AA4E9E9000597AC /* EntryModel.swift */,
+				37F7AE0A1AA4FC0C000597AC /* Curator.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 				37D1B3C51AA2407400BED021 /* LocationListTableViewController.swift in Sources */,
 				37D1B3BD1AA21D9700BED021 /* MenuHeaderButton.swift in Sources */,
 				37D1B3B91AA1876400BED021 /* SwitchView.swift in Sources */,
+				37F7AE0B1AA4FC0C000597AC /* Curator.swift in Sources */,
 				37EA13F11A97C8AF00A63589 /* Reachability.m in Sources */,
 				37EA13FA1A98FCB400A63589 /* Location.swift in Sources */,
 				37EA13F31A97CAB200A63589 /* ModelInterfaceSingleton.swift in Sources */,

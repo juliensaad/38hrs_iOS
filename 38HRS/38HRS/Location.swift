@@ -12,5 +12,5 @@ class Location: EntryModel {
 
     var description : String!
     var category : Category!
-    
+    var curator : Curator!
 }

@@ -21,7 +21,9 @@ class KingViewController: UIViewController {
         if(self.tabBarController != nil){
             mainNavigationController = (self.tabBarController as MainTabBarController).getNavigationController()
         }
-        directNavigationController = self.navigationController
+        if(self.navigationController != nil){
+            directNavigationController = self.navigationController
+        }
         
         self.extendedLayoutIncludesOpaqueBars = true
     }

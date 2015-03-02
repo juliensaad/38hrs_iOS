@@ -18,8 +18,12 @@ class KingTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        mainNavigationController = (self.tabBarController as MainTabBarController).getNavigationController()
-        directNavigationController = self.navigationController
+        if(self.tabBarController != nil){
+            mainNavigationController = (self.tabBarController as MainTabBarController).getNavigationController()
+        }
+        if(self.navigationController != nil){
+            directNavigationController = self.navigationController
+        }
         
         self.extendedLayoutIncludesOpaqueBars = true
     }
