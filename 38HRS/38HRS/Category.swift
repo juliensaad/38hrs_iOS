@@ -10,5 +10,14 @@ import Foundation
 
 class Category: EntryModel {
     
+    private var isFilter = true
     
+    func toggleFilter(){
+        isFilter = !isFilter
+        NSNotificationCenter.defaultCenter().postNotificationName(filterChangeNotificationKey, object: self)
+    }
+    
+    func getFilter() -> Bool{
+        return isFilter
+    }
 }

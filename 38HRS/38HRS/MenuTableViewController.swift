@@ -23,6 +23,10 @@ class MenuTableViewController: KingTableViewController {
         
         self.detectContentState()
     }
+    
+    override func updateUI() {
+        tableView.reloadData()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -64,6 +68,7 @@ extension MenuTableViewController: UITableViewDelegate{
     
     override func tableView(tableView: UITableView, didHighlightRowAtIndexPath indexPath: NSIndexPath){
         (tableView.cellForRowAtIndexPath(indexPath) as SwitchTableViewCell).toggleSwitch()
+        modelSingleton.categories[indexPath.item].toggleFilter()
     }
 }
 

@@ -13,7 +13,7 @@ class SwitchView: UIImageView {
     private var active : Bool!
     
     override func drawRect(rect: CGRect) {
-        self.setActive(false)
+        self.setActive(true)
     }
     
     func setActive(active:Bool){

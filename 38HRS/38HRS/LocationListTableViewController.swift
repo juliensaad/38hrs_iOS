@@ -12,6 +12,8 @@ class LocationListTableViewController: KingTableViewController {
 
     @IBOutlet weak var navItem: UINavigationItem!
     
+    private var filteredLocations = [Location]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,9 +27,11 @@ class LocationListTableViewController: KingTableViewController {
         self.tableView.backgroundColor = UIColor.whiteColor()
         
         self.detectContentState()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateUI", name: filterChangeNotificationKey, object: nil)
     }
     
     override func updateUI() {
+        filteredLocations = modelSingleton.getFilteredLocation()
         tableView.reloadData()
     }
     
@@ -51,7 +55,7 @@ extension LocationListTableViewController: UITableViewDelegate{
 
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return modelSingleton.locations.count
+        return filteredLocations.count
     }
     
     override func tableView(tableView: UITableView, didHighlightRowAtIndexPath indexPath: NSIndexPath){
@@ -69,7 +73,7 @@ extension LocationListTableViewController: UITableViewDelegate{
 extension LocationListTableViewController: UITableViewDataSource{
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var location = modelSingleton.locations[indexPath.item]
+        var location = filteredLocations[indexPath.item]
         
         var cell = LocationListItemTableViewCell()
         cell.awakeFromNib()
@@ -88,7 +92,7 @@ extension LocationListTableViewController: UITableViewDataSource{
         let locationViewController = self.storyboard?.instantiateViewControllerWithIdentifier("LocationViewController") as LocationViewController
         
         var ind = sender!.tag
-        locationViewController.location = modelSingleton.locations[ind]
+        locationViewController.location = filteredLocations[ind]
         
         self.directNavigationController.pushViewController(locationViewController, animated: true)
     }

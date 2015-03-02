@@ -92,6 +92,7 @@ extension MainNavigationController: ENSideMenuDelegate{
     
     func sideMenuWillClose() {
         self.hideCover()
+        
     }
     
     func sideMenuShouldOpenSideMenu() -> Bool {

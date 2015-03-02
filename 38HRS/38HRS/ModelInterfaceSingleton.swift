@@ -17,7 +17,7 @@ class ModelInterfaceSingleton{
     let reachability: Reachability = Reachability.reachabilityForInternetConnection()
     
     var contentLoaded = false
-    var locations = [Location]()
+    private var locations = [Location]()
     var categories = [Category]()
     var curators = [Curator]()
     
@@ -178,6 +178,7 @@ class ModelInterfaceSingleton{
         self.curators.append(curator)
     }
     
+    // MARK: Model Retrieving
     func getCategoryFromId(id: String) -> Category?{
         for cat in self.categories{
             if(cat.identifier == id){
@@ -203,5 +204,17 @@ class ModelInterfaceSingleton{
             }
         }
         return nil
+    }
+    
+    func getFilteredLocation() -> [Location]{
+        var filteredLocations = [Location]()
+        
+        for loc in self.locations{
+            if(loc.category.getFilter()){
+                filteredLocations.append(loc)
+            }
+        }
+        
+        return filteredLocations
     }
 }

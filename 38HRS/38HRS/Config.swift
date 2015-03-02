@@ -9,6 +9,7 @@
 import Foundation
 
 let contentLoadNotificationKey = "CONTENTLOAD"
+let filterChangeNotificationKey = "FILTERCHANGE"
 
 let greenColor : UIColor = UIColor(netHex:0x00bc5c)
 let darkGrayColor = UIColor(netHex:0x737373)
