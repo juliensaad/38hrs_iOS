@@ -33,6 +33,7 @@
 		37EA13FA1A98FCB400A63589 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EA13F91A98FCB400A63589 /* Location.swift */; };
 		37F7AE051AA4B95B000597AC /* KingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F7AE041AA4B95B000597AC /* KingTableViewController.swift */; };
 		37F7AE071AA4D0F4000597AC /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F7AE061AA4D0F4000597AC /* Category.swift */; };
+		37F7AE091AA4E9E9000597AC /* EntryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F7AE081AA4E9E9000597AC /* EntryModel.swift */; };
 		A1ADCF20934AF3EF40968B0F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3799F540AC59DD2663F189A /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +81,7 @@
 		37EA13F91A98FCB400A63589 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		37F7AE041AA4B95B000597AC /* KingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KingTableViewController.swift; sourceTree = "<group>"; };
 		37F7AE061AA4D0F4000597AC /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		37F7AE081AA4E9E9000597AC /* EntryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryModel.swift; sourceTree = "<group>"; };
 		A4BEC918D96C2D245C0828E4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E3799F540AC59DD2663F189A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -231,6 +233,7 @@
 				37EA13F21A97CAB200A63589 /* ModelInterfaceSingleton.swift */,
 				37EA13F91A98FCB400A63589 /* Location.swift */,
 				37F7AE061AA4D0F4000597AC /* Category.swift */,
+				37F7AE081AA4E9E9000597AC /* EntryModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 				37F7AE051AA4B95B000597AC /* KingTableViewController.swift in Sources */,
 				3761A70A1A9FA779005125B2 /* BorderedLabel.swift in Sources */,
 				37D77CD81A8E80C200BAB659 /* LocationViewController.swift in Sources */,
+				37F7AE091AA4E9E9000597AC /* EntryModel.swift in Sources */,
 				37EA13ED1A97B7B300A63589 /* Config.swift in Sources */,
 				3761A7101A9FCBAF005125B2 /* MenuTableViewController.swift in Sources */,
 				370BAFF21A9D6E3200DC0EAB /* MainTabBarController.swift in Sources */,

@@ -8,12 +8,7 @@
 
 import Foundation
 
-class Category {
-    var identifier : String!
-    var name : String!
+class Category: EntryModel {
     
-    init(id: String, name: String){
-        self.identifier = id
-        self.name = name
-    }
+    
 }

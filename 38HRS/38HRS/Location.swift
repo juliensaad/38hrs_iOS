@@ -8,15 +8,9 @@
 
 import Foundation
 
-class Location {
-    
-    var identifier : String!
-    var name : String!
+class Location: EntryModel {
+
     var description : String!
-    var category : String!
-    
-    init(id: String){
-        self.identifier = id
-    }
+    var category : Category!
     
 }

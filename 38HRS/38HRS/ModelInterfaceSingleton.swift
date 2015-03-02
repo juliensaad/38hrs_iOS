@@ -18,6 +18,7 @@ class ModelInterfaceSingleton{
     
     var contentLoaded = false
     var locations = [Location]()
+    var categories = [Category]()
     
     // Singleton logic
     class var sharedInstance: ModelInterfaceSingleton {
@@ -107,7 +108,9 @@ class ModelInterfaceSingleton{
         for var i=0 ; i<entriesArray.count ; i++ {
             var entry = entriesArray[i] as CDAEntry
             
-            //if(entre.contentType)
+            if(entry.contentType.name == "Category"){
+                addCategory(entry)
+            }
             
             if(entry.contentType.name == "Location"){
                 addLocation(entry)
@@ -125,19 +128,51 @@ class ModelInterfaceSingleton{
     
     private func addLocation(entry: CDAEntry){
         
-        var location = Location(id: entry.identifier as String)
-        
-        if(entry.fields["name"] != nil){
-            location.name = entry.fields["name"]? as String
+        // Location already exist or has noname
+        if(getLocationFromId(entry.identifier) != nil || entry.fields["name"] == nil){
+            return
         }
+        
+        var location = Location(id: entry.identifier as String, name: entry.fields["name"]? as String)
+        
         if(entry.fields["description"] != nil){
             location.description = entry.fields["description"]? as String
         }
         if(entry.fields["category"] != nil){
             var catEntry = entry.fields["category"] as CDAEntry
-            location.category = catEntry.fields["category"]? as String
+            addCategory(catEntry)
+            location.category = getCategoryFromId(catEntry.identifier)
         }
         
         self.locations.append(location)
+    }
+    
+    private func addCategory(entry: CDAEntry){
+        
+        // Category already exists
+        if(getCategoryFromId(entry.identifier) != nil || entry.fields["category"] == nil){
+            return
+        }
+        
+        var category = Category(id: entry.identifier, name: entry.fields["category"]? as String)
+        self.categories.append(category)
+    }
+    
+    func getCategoryFromId(id: String) -> Category?{
+        for cat in self.categories{
+            if(cat.identifier == id){
+                return cat
+            }
+        }
+        return nil
+    }
+    
+    func getLocationFromId(id: String) -> Location?{
+        for loc in self.locations{
+            if(loc.identifier == id){
+                return loc
+            }
+        }
+        return nil
     }
 }

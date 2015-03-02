@@ -30,11 +30,6 @@ class LocationListTableViewController: KingTableViewController {
     override func updateUI() {
         tableView.reloadData()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     @IBAction func didClickNavMenuButton(sender: AnyObject) {
         mainNavigationController.sideMenu?.showSideMenu()
@@ -43,10 +38,10 @@ class LocationListTableViewController: KingTableViewController {
     @IBAction func didClickNavMapButton(sender: AnyObject) {
         
     }
-    
-    func didClickName(sender : UIButton?){
-        let locationViewController = self.storyboard?.instantiateViewControllerWithIdentifier("LocationViewController") as LocationViewController
-        self.directNavigationController.pushViewController(locationViewController, animated: true)
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
 
 }
@@ -80,10 +75,22 @@ extension LocationListTableViewController: UITableViewDataSource{
         cell.awakeFromNib()
         
         cell.setName(location.name)
+        cell.setCategorie(location.category.name)
+        cell.locationImageButton.image = modelSingleton.getLocalImage()
         
+        cell.nameLabel.tag = indexPath.item
         cell.nameLabel.addTarget(self, action: "didClickName:", forControlEvents: .TouchUpInside)
         
         return cell
+    }
+    
+    func didClickName(sender : UIButton?){
+        let locationViewController = self.storyboard?.instantiateViewControllerWithIdentifier("LocationViewController") as LocationViewController
+        
+        var ind = sender!.tag
+        locationViewController.location = modelSingleton.locations[ind]
+        
+        self.directNavigationController.pushViewController(locationViewController, animated: true)
     }
     
 }

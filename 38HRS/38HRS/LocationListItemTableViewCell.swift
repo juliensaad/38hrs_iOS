@@ -51,17 +51,15 @@ class LocationListItemTableViewCell: UITableViewCell {
         catTag.frame.origin.x = contentMargin
         catTag.frame.origin.y = locationImageButton.frame.height + contentMargin
         
-        catTag.text = "Food"
         catTag.textColor = greenColor
         catTag.font = UIFont(name: "FuturaStd-Bold", size: 17)
-        catTag.sizeToFit()
-        catTag.drawRect(catTag.textRectForBounds(catTag.frame,limitedToNumberOfLines: 0))
+        setCategorie("food")
         self.addSubview(catTag)
         
         // Name label
-        
         self.addSubview(nameLabel)
         
+        // Total height
         self.cellHeight = catTag.frame.origin.y + catTag.frame.height + contentMargin
     }
     
@@ -76,10 +74,17 @@ class LocationListItemTableViewCell: UITableViewCell {
         nameLabel.sizeToFit()
         nameLabel.frame.size.width = name.frame.width
         
-        nameLabel.frame.origin.x = contentMargin + catTag.frame.width + smallMargin
         nameLabel.center.y = catTag.center.y
         
         name.center.y = nameLabel.frame.height/2
+    }
+    
+    func setCategorie(catName: String){
+        catTag.text = catName
+        catTag.sizeToFit()
+        catTag.drawRect(catTag.textRectForBounds(catTag.frame,limitedToNumberOfLines: 0))
+        
+        nameLabel.frame.origin.x = contentMargin + catTag.frame.width + smallMargin
     }
     
     func getCellHeight() -> CGFloat{
