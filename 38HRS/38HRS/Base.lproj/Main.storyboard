@@ -229,7 +229,7 @@
             </objects>
             <point key="canvasLocation" x="760" y="-402"/>
         </scene>
-        <!--Title-->
+        <!--Location List Table View Controller-->
         <scene sceneID="uE0-yd-S9r">
             <objects>
                 <tableViewController id="cfc-q7-lXh" customClass="LocationListTableViewController" customModule="_8HRS" customModuleProvider="target" sceneMemberID="viewController">
@@ -250,7 +250,7 @@
                             <outlet property="delegate" destination="cfc-q7-lXh" id="Zoy-Jy-1vV"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="S4d-3Y-LdW">
+                    <navigationItem key="navigationItem" id="S4d-3Y-LdW">
                         <barButtonItem key="leftBarButtonItem" image="burger" id="yYx-Id-3RL">
                             <connections>
                                 <action selector="didClickNavMenuButton:" destination="cfc-q7-lXh" id="fTE-2J-UzU"/>
